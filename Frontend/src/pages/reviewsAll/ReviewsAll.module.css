@@ -1,0 +1,73 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #6940ff;
+}
+
+.titulo {
+    font-size: 28px;
+    color: #fff;
+}
+
+.filtro {
+    margin: 40px auto;
+    display: flex;
+}
+
+.filtro label {
+    color: rgb(240,240,240);
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.filtro select {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6940ff;
+    padding: 6px 16px;
+    margin-right: 30px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    outline: none;
+    background: rgb(240,240,240);
+    cursor: pointer;
+}
+
+.filtro select:hover {
+    background: #fff;
+}
+
+.filtro option {
+    font-weight: 500;
+    color: #6940ff;
+    background: #fff;
+}
+
+.reviewsContainer {
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+    overflow-y: auto;
+    align-items: stretch;
+}
+
+.notFound {
+    width: auto;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0px auto;
+    margin-top: 120px;
+    text-align: center;
+}
+
+

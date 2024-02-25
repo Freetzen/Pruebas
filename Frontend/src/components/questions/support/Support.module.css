@@ -1,0 +1,95 @@
+.containerSupport {
+  height: 920px;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleCuestion {
+  width: auto;
+  height: auto;
+  padding: 20px 15px;
+}
+
+.containerSupport .titleCuestion h3 {
+  color: rgb(76, 76, 76);
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.containerImages {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imageContainer {
+  margin: 15px 15px;
+  width: 450px;
+  position: relative;
+  display: inline-block;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.image {
+  max-width: 450px;
+  height: auto;
+}
+
+
+.containerIcon .smallImage {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  font-size: 100px;
+}
+
+
+.imageContainer:hover {
+  transform: scale(1.03);
+}
+
+.imageContainer .title {
+  margin: 20px 0px;
+  padding: 15px;
+  text-align: center;
+}
+
+.imageContainer .title h4 {
+  color: #646464;
+  font-size: 30px;
+}
+
+.containerOptions {
+  width: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+.options-list {
+  display: flex;
+    gap: 15px;
+    padding-left: 15px;
+}
+
+.options-list button {
+  height: 50px;
+    width: 200px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,64 @@
+.containerLegalNorm {
+    height: 920px;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerLegalNorm .titleCuestion {
+    width: auto;
+    height: auto;
+    padding: 20px 15px;
+}
+
+.containerLegalNorm .titleCuestion h3 {
+    color: rgb(76, 76, 76);
+    font-size:45px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.containerButtons {
+    display: flex;
+    gap: 15px;
+    padding-left: 15px;
+}
+
+.containerButtons .button {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #6940ff;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+.TrueLegalNorm {
+    display: flex;
+    gap: 15px;
+    padding-left: 15px;
+}
+
+
+.TrueLegalNorm input{
+    padding-left: 15px;
+    font-size: 18px;
+    height: 50px;
+    width: 60%;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.TrueLegalNorm button{
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #6940ff;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}

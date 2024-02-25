@@ -1,0 +1,42 @@
+.containerLanguage {
+    height: 920px;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleCuestion {
+    width: auto;
+    height: auto;
+    padding: 20px 15px;
+}
+
+.containerLanguage .titleCuestion h3{
+    color: rgb(76, 76, 76);
+    font-size:45px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.containerLanguage .containerButtons {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    padding-left: 15px;
+}
+
+.containerButtons .button {
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #6940ff;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}

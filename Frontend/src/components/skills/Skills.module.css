@@ -1,0 +1,68 @@
+.containerSkills {
+    background-image: url('../images/fondo.jpg');
+    background-attachment: fixed;
+    height: 100%;
+    padding: 30px 15px;
+}
+
+
+.containerTitle {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.containerTitle .title{
+    font-size: 50px; 
+    font-weight: 600;
+    color: aliceblue;
+    letter-spacing: -2px;
+}
+
+.containerCards {
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.containerCards .boxCard{
+    background-color: aliceblue;
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.containerCards .boxCard .icon{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.containerCards .titleCard{ 
+    margin: 5px 10px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerCards .titleCard h4{
+    text-align: center;
+    font-size: 20px;
+    color: #484848;
+    margin: 5px;
+    font-weight: 500;
+}
+
+.containerCards .titleCard p{
+    width: 90%;
+    text-align:center;
+    font-size: 15px;
+    color: #484848;
+    
+    
+}
+

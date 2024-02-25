@@ -1,0 +1,16 @@
+.boton {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 20px 0px;
+    border-radius: 4px;
+    border: none;
+    background: #6940ff;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.boton:hover {
+    font-size: 19px;
+}

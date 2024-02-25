@@ -1,0 +1,65 @@
+.HeaderContainer {
+  background-image: url("../images/fondo.jpg");
+  background-attachment: fixed;
+  height: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.titleContainer {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 100px;
+}
+
+.h1 {
+  color: aliceblue;
+  width: 100%;
+  height: max-content;
+  font-size: 75px;
+  letter-spacing: -4px;
+  margin-bottom: 10px;
+  line-height: 5rem;
+}
+
+
+
+.ImgContainer {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgResponsive {
+  width: 650px;
+}
+
+.customshapedividerbottom1707406615 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 50;
+}
+
+.customshapedividerbottom1707406615 svg {
+  display: block;
+  width: calc(145% + 1.3px);
+  height: 191px;
+}
+
+.customshapedividerbottom1707406615 .shapefill {
+  fill: aliceblue;
+}

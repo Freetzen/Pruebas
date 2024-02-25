@@ -1,0 +1,43 @@
+.projectsContainer {
+    background-color: #6940ff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.projectsContainer .filtersContainer {
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.filtersContainer select {
+    width: 15%;
+    height: 40px;
+}
+
+
+.proyectos {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 70px 0px;
+}
+
+.selectOptions{
+    margin-top: 50px;
+}
+
+.selectContainer{
+    margin-top: 50px;
+    padding-left: 30%;
+    padding-right: 30%;
+}

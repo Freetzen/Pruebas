@@ -1,0 +1,92 @@
+.NavBarContainer {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    margin-top: 6px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Nav */
+
+.Link .logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* Menu Items */
+
+.NavBarContainer .menu {
+    width: 20%;
+}
+
+.menu ul {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+/* Login */
+
+.login button {
+    height: max-content;
+    height: 50px;
+    width: max-content;
+    font-weight: 400;
+    font-size: 17px;
+    color: aliceblue;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  .dropdown span{
+    color: white;
+  }
+  
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdownContent a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }

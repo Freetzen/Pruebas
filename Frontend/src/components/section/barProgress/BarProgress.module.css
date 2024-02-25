@@ -1,0 +1,28 @@
+.containerBar {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bar {
+    background-color:  rgb(205, 205, 205);
+    border-left: none;
+    width: 100%;
+    height: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.bar .porcentaje {
+    border-radius: 30px;
+    height: 100%;
+    width: 60%;
+    background-color: #6940ff;
+}
+
+.containerBar span {
+    font-size: 20px;
+    color:rgb(80, 80, 80) ;
+}

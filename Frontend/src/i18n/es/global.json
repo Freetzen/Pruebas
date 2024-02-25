@@ -1,0 +1,286 @@
+{
+  "NavBar": {
+    "Home": "Inicio",
+    "Quote": "Cotizar",
+    "Projects": "Proyectos",
+    "ContactUs": "Contactanos"
+  },
+
+  "Header": {
+    "title": "Si puedes imaginarlo, nosotros podemos",
+    "change": {
+      "word1": "desarrollarlo.",
+      "word2": "hacer que suceda.",
+      "word3": "darle vida.",
+      "word4": "construirlo."
+    }
+  },
+
+  "LoginButton": {
+    "title": "Iniciar Sesion"
+  },
+
+  "UserAccount": {
+    "Membership": "Membresia",
+    "creationDate": "Fecha de creacion de la cuenta",
+    "SignOut": "Desconectarse",
+    "adminPanel": "Panel de administrador"
+  },
+
+  "AboutUs": {
+    "title": "Sobre nosotros",
+    "description": "En WebDevelop, no solo creamos sitios web, también tejemos historias digitales. Desde nuestros modestos comienzos en 2022, nos hemos dedicado con pasión a crear experiencias en línea excepcionales que cautivan, inspiran y conectan."
+  },
+
+  "WhyWedevelop": {
+    "title": "¿Por que WebDevelop?",
+    "section1": {
+      "title": "  Experiencia",
+      "description": "Con experiencia en la creación de sitios web, nos destacamos en diseño, programación y optimización. Nuestro enfoque centrado en el usuario y nuestro conocimiento actualizado garantizan sitios web eficientes y estéticamente agradables."
+    },
+    "section2": {
+      "title": "Creatividad",
+      "description": "Fusionamos ideas innovadoras para dar vida a proyectos únicos. Nuestra habilidad en el arte de la creatividad se refleja en diseños originales y soluciones imaginativas que superan las expectativas, añadiendo un toque distintivo a cada creación."
+    },
+    "section3": {
+      "title": "Atención al detalle",
+      "description": "Cada proyecto es cuidadosamente supervisado para garantizar precisión y calidad. Nuestra dedicación se refleja en resultados impecables, donde cada elemento está finamente afinado para brindar la máxima excelencia."
+    },
+    "section4": {
+      "title": "Profesionalismo",
+      "description": "Elevamos el nivel de profesionalismo en cada tarea que realizamos. Con un enfoque riguroso, integridad y experiencia sólida, brindamos servicios excepcionales. Nuestra dedicación a la excelencia y la ética profesional se traduce en resultados satisfactorios."
+    },
+    "section5": {
+      "title": "Diseños unicos",
+      "description": "Creamos diseños únicos que cautivan y destacan. Nuestra pasión por la originalidad se refleja en cada proyecto, fusionando la innovación estética para ofrecer soluciones visualmente impresionantes con una impresión duradera."
+    },
+    "section6": {
+      "title": "Eficiencia",
+      "description": "Priorizamos la eficiencia en cada fase de nuestro trabajo. Desde la planificación hasta la ejecución, nuestros procesos optimizados garantizan resultados rápidos y precisos, entregando proyectos de alta calidad en un tiempo récord."
+    }
+  },
+
+  "Highlights": {
+    "title": "Destacados",
+    "ProjectsButton": "Ver Todos Los Proyectos"
+  },
+
+  "QuoteHome": {
+    "title": "¡Calcula tu Presupuesto al Instante!",
+    "button": "Cotizar Ahora"
+  },
+
+  "RatingHome": {
+    "rating": "Calificación",
+    "comments": "reseñas Totales",
+    "NotLogged": "Debes estar registrado para enviar una reseña",
+    "RatingForm": {
+      "message": "Deja tu reseña :",
+      "button": "Enviar Reseña!"
+    },
+    "viewAll": "Ver todas las reseñas",
+    "ReviewsAll": {
+      "error1": "Error al obtener reviews por rating:",
+      "error2": "Error al obtener reviews por rating:",
+      "title": "Comentarios y reseñas",
+      "all": "All reviews",
+      "5stars": "5 estrellas",
+      "4stars": "4 estrellas",
+      "3stars": "3 estrellas",
+      "2stars": "2 estrellas",
+      "1star": "1 estrellas",
+      "noReviewsStar": "No se encontraron reseñas con esa calificación."
+    }
+  },
+
+  "Footer": {
+    "bydeveloper": "By developers",
+    "Navigation": {
+      "title": "Rutas",
+      "Home": "Inicio",
+      "Quote": "Cotizar",
+      "Projects": "Proyectos",
+      "ContactUs": "Contactanos"
+    },
+    "ContactUs": "Contactenos",
+    "Newsletter": {
+      "title": "Suscríbete a nuestro boletín",
+      "placeholder": "Ingresa tu correo electrónico",
+      "button": "Suscribirme"
+    },
+    "Copyright": "©WeDevelop Todos Los Derechos Reservados 2024"
+  },
+
+  "QuoteQuestions": {
+    "Section1": "¿Cuál será el propósito de su proyecto?",
+    "Section2": {
+      "title": "¿Su sitio consumirá alguna API o base de datos externa?",
+      "input": "Especifica tu API o base de datos a usar",
+      "save": "Guardar"
+    },
+    "Section3": {
+      "title": "¿Número estimado de productos para publicar?",
+      "answer1": "Menos de 10",
+      "answer2": "Entre 10 a 20",
+      "answer3": "Mas de 20"
+    },
+    "Section4": {
+      "title": "¿Requieres integración con plataformas o servicios externos, como redes sociales o sistemas de pago online?",
+      "answer1": "Si",
+      "whichOne": {
+        "title": "¿Cuales?",
+        "input": "Especifica las plataformas o servicios que requieres",
+        "save": "Continuar"
+      },
+      "answer3": "Pregunta anterior"
+    },
+    "Section5": {
+      "title": "¿Existe algún requisito legal o normativa específica que deba cumplirse en el desarrollo de su sitio web?",
+      "answer1": "Si",
+      "whichOne": {
+        "title": "¿Cuales?",
+        "input": "Especifica cuales requieres",
+        "save": "Continuar"
+      },
+      "answer3": "Pregunta anterior"
+    },
+    "Section6": {
+      "title": "¿Cuántas visitas estima que tendrá su sitio?",
+      "answer1": "5 de 10 visitas por mes",
+      "answer2": "10 a 20 visitas por mes",
+      "answer3": "Mas de 20 visitas por mes"
+    },
+    "Section7": {
+      "title": "¿Cuántos idiomas necesita que admita su sitio web?",
+      "answer1": "Un lenguaje",
+      "answer2": "Bilingüe",
+      "answer3": "Multilingüe"
+    },
+    "Section8": {
+      "title": "Seleccione una plantilla",
+      "subtitle": "¿No te gusto ninguna plantilla?",
+      "input": "Escribe aqui tus ideas",
+      "continue": "Continuar"
+    },
+    "Section9": {
+      "title": "¿Su sitio web requerirá soporte?",
+      "answer1": {
+        "title": "Requiere soporte",
+        "subtitle": "Opciones de soporte",
+        "op1": "Semanal",
+        "op2": "Mensual",
+        "op3": "Trimestral",
+        "op4": "Otros"
+      },
+      "answer2": "No requiere soporte"
+    },
+    "Section10": {
+      "title": "¿Su sitio tiene algún requisito que no esté cubierto por nuestro enrutamiento de preguntas?",
+      "input": "Especifica tus requisitos aqui",
+      "continue": "Continuar"
+    },
+    "Summary": {
+      "questions": "Preguntas",
+      "answers": "Respuestas",
+      "edit": "Editar",
+      "plans": "Seleccionar Plan"
+    }
+  },
+
+  "plans": {
+    "BasicPlan": {
+      "title": "Plan Básico",
+      "sec1": "Registro en otras plataformas.",
+      "sec2": "Dominio personalizado.",
+      "sec3": "Plantillas predefinidas.",
+      "sec4": "Campos por formulario.",
+      "sec5": "Correo electrónico personalizado.",
+      "sec6": "Certificado SSL.",
+      "sec7": "Acceso prioritario a nuevas características y actualizaciones.",
+      "sec8": "Automatizaciones de correo electrónico.",
+      "sec9": "Panel y administradores multi-sitio.",
+      "sec10": "Chat en vivo.",
+      "sec11": "Chat en vivo personalizado con IA.",
+      "button": "Comenzar"
+    },
+    "BusinessPlan": {
+      "title": "Plan de Negocios",
+      "sec1": "Certificado SSL.",
+      "sec2": "Registro en otras plataformas.",
+      "sec3": "Dominio personalizado.",
+      "sec4": "Acceso prioritario a nuevas características y actualizaciones.",
+      "sec5": "Automatizaciones de correo electrónico.",
+      "sec6": "Chat en vivo.",
+      "sec7": "Campos por formulario.",
+      "sec8": "Sitio web personalizado.",
+      "sec9": "Panel y administradores multi-sitio.",
+      "sec10": "Correo electrónico personalizado.",
+      "sec11": "Chat en vivo personalizado con IA.",
+      "button": "Comenzar"
+    },
+    "EnterprisePlan": {
+      "title": "Plan Empresarial",
+      "sec1": "Certificado SSL.",
+      "sec2": "Registro en otras plataformas.",
+      "sec3": "Dominio personalizado.",
+      "sec4": "Acceso prioritario a nuevas características y actualizaciones.",
+      "sec5": "Sitio web personalizado.",
+      "sec6": "Correo electrónico personalizado.",
+      "sec7": "Automatizaciones de correo electrónico.",
+      "sec8": "Panel y administradores multi-sitio.",
+      "sec9": "Chat en vivo.",
+      "sec10": "Chat en vivo personalizado con IA.",
+      "sec11": "Campos por formulario.",
+      "button": "Comenzar"
+    }
+  },
+
+  "ContactUsPage": {
+    "alert": {
+      "title": "¡Su mensaje ha sido enviado!",
+      "description": "Nos pondremos en contacto contigo a la brevedad"
+    },
+    "bydevelopers": "By developers",
+    "title": "Contactenos",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "description": "Escribe tu mensaje aqui...",
+    "submit": "Enviar"
+  },
+
+  "Projects": {
+    "notFound": "Proyecto no encontrado",
+    "cards": "Categoria:",
+    "paginate": {
+      "prev": "Anterior",
+      "next": "Siguiente"
+    },
+    "projectsDetails": {
+      "title": "Categoria:",
+      "back": "Regresar a proyectos",
+      "quote": "Cotizar"
+    },
+    "projectsSelect": {
+      "categories": {
+        "E-commerce": "Comercio Electrónico",
+        "Tourism": "Turismo",
+        "Health": "Salud",
+        "Landing Page": "Página de Destino",
+        "Social Network": "Red Social",
+        "Portfolio": "Portafolio",
+        "Entertainment": "Entretenimiento"
+      }
+    }
+  },
+
+  "NotFoundPage": {
+    "part1": "404 - Pagina no encontrada",
+    "part2": "Puede que estés aquí porque:",
+    "part3": "• La pagina ha sido movida o eliminada",
+    "part4": "• La pagina ya no existe",
+    "part5": "Estabas buscando a tus gatitos y te perdiste",
+    "part6": "• Te gustan las paginas 404",
+    "part7": "¡No llores! simplemente haga clic en el botón de abajo para solucionarlo",
+    "button": "Zona segura"
+  }
+}

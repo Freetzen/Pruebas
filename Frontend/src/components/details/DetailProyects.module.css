@@ -1,0 +1,98 @@
+/* DetailProyects.module.css */
+
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #6940ff; /* Color de fondo */
+}
+
+.detailproduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px; /* Ajusta el tamaño máximo del contenedor */
+  width: 90%; /* Ajusta el ancho del contenedor */
+  background-color: #fff; /* Color de fondo */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 30px; /* Espaciado interno */
+}
+
+/* DetailProyects.module.css */
+
+.detailsLeft {
+  flex: 1; /* Para que ocupe el espacio necesario */
+  margin-right: 30px; /* Margen a la derecha */
+  display: flex; /* Activar flexbox */
+  flex-direction: column; /* Apilar elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+
+.detailsRight {
+  flex: 1; /* Para que ocupe el espacio necesario */
+  margin-right: 30px; /* Margen a la derecha */
+  display: flex; /* Activar flexbox */
+  flex-direction: column; /* Apilar elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+/* Estilos para el nombre del proyecto */
+.detailsLeft h2 {
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-size: 28px; /* Tamaño de fuente */
+  color: #333; /* Color de texto */
+  font-family: 'Montserrat', sans-serif; /* Fuente */
+}
+
+/* Estilos para la imagen */
+.detailsLeft .imgDetails {
+  max-width: 100%; /* Para asegurar que la imagen no se desborde */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para la descripción y la categoría */
+.detailsRight p, .detailsRight h5 {
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-size: 18px; /* Tamaño de fuente */
+  color: #000000; /* Color de texto */
+  font-family: 'Roboto', sans-serif; /* Fuente */
+}
+
+/* Estilos para los botones */
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button1, .button2 {
+  padding: 12px 24px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border: none; /* Quita el borde */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: all 0.3s ease; /* Transición suave */
+  font-family: 'Roboto', sans-serif; /* Fuente */
+  margin: 0px 5px;
+}
+
+.button1 {
+  background-color: #007bff; /* Color de fondo */
+  color: #fff; /* Color de texto */
+}
+
+.button2 {
+  background-color: #28a745; /* Color de fondo */
+  color: #fff; /* Color de texto */
+}
+
+/* Efecto de elevación al pasar el mouse sobre los botones */
+.button1:hover, .button2:hover {
+  transform: translateY(-2px); /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}

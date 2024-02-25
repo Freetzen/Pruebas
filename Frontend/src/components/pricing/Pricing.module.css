@@ -1,0 +1,98 @@
+
+.pricing {
+  background-image: linear-gradient(45deg, #5222d0 0%, #6940ff 100%);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 150px 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  height: max-content;
+  background-image: url('./images/fondo.jpg');
+  border-radius: 10px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  margin: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  transition: 0.5s ease-in-out;
+}
+.container:hover {
+  transform: scale(1.1);
+}
+
+.container:hover .header > h2 {
+  transform: scale(1.1);
+  color: #6940ff;
+  letter-spacing: 2;
+}
+
+.header {
+  margin: 1rem;
+  text-align: center;
+}
+.header > img {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+.detail {
+  width: 100%;
+}
+.detail > p {
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #6940ff;
+}
+.detail > p:hover {
+  background-color: rgb(76, 79, 248);
+}
+
+.check {
+  color: black;
+}
+.nocheck {
+  color: red;
+}
+.star{
+  color: gold;
+}
+
+.price {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem;
+}
+.price > p {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.price > p > sup,
+.price > p > sub {
+  font-size: 1rem;
+}
+
+.cardbutton {
+  padding: 0.6rem 3rem;
+  border: 2px solid purple;
+  background-color: #5222d0;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 50ms ease-in;
+}
+
+.cardbutton:hover {
+    border: 2px solid #ec615b;
+    background-color: transparent;
+  background-color: #ec615b;
+  font-weight: 800;
+}

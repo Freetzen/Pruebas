@@ -1,0 +1,71 @@
+.containerApiOrDatabase {
+    height: 920px;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleCuestion {
+    width: auto;
+    height: auto;
+    padding: 20px 15px;
+}
+
+.titleCuestion h3 {
+    color: rgb(76, 76, 76);
+    font-size:45px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.apiOrDatabaseContainer {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    gap: 20px;
+}
+
+.ApiOrDatabaseOpcionOne {
+    display: flex;
+    gap: 15px;
+}
+
+.apiOrDatabaseContainer .ApiOrDatabaseOpcionOne .button{
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #6940ff;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+
+.ApiOrDatabaseOpcionTwo {
+    display: flex;
+    gap: 15px;
+}
+
+.ApiOrDatabaseOpcionTwo input{
+    padding-left: 15px;
+    font-size: 18px;
+    height: 50px;
+    width: 60%;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.ApiOrDatabaseOpcionTwo button{
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #6940ff;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
