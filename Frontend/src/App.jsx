@@ -17,7 +17,7 @@ import ChatSocket from './components/chatSocket/ChatSocket'
 import { Payment } from './pages/payment/Payment'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://wedevelop-production.up.railway.app/'
+axios.defaults.baseURL = 'https://pruebas-production-fa5c.up.railway.app/'
 
 
 function App() {

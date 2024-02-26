@@ -16,7 +16,7 @@ const app = express();
 const server = createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: 'https://wedevelop.vercel.app/'
+    origin: 'https://pruebas-orpin.vercel.app/'
   }
 })
 
