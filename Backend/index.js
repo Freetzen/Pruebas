@@ -16,7 +16,7 @@ const app = express();
 const server = createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: 'https://pruebas-orpin.vercel.app/'
+    origin: 'https://pruebas-orpin.vercel.app'
   }
 })
 
@@ -31,7 +31,6 @@ io.on('connection', (socket) => {
 
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(cors());
 app.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');
    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
