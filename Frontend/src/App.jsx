@@ -22,7 +22,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { loadUserData } from './redux/actions'
 
 axios.defaults.baseURL = 'https://pruebas-production-2c83.up.railway.app/'
-// axios.defaults.baseURL = 'http://localhost:3001/'
 
 
 function App() {

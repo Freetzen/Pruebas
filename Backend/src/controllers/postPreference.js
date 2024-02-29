@@ -20,9 +20,9 @@ const postPreference = async (req, res) => {
         },
       ],
       back_urls: {
-        success: "https://wedevelop.vercel.app/successpayment",
-        failure: "https://wedevelop.vercel.app/successpayment",
-        pending: "https://wedevelop.vercel.app/successpayment",
+        success: "https://pruebas-orpin.vercel.app/successpayment",
+        failure: "https://pruebas-orpin.vercel.app/successpayment",
+        pending: "https://pruebas-orpin.vercel.app/successpayment",
       },
       auto_return: "approved",
       additional_info: quote
