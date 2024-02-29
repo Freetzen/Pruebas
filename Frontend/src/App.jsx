@@ -28,7 +28,7 @@ function App() {
   const data = useSelector(state => state.userData)
   const dispatch = useDispatch()
   const localStorageUser = getUserData()
-  const [localData, setLocalData] = useState({...localStorageUser})
+  const [localData, setLocalData] = useState(localStorageUser)
   const location = useLocation()
   
   useEffect(() => {
