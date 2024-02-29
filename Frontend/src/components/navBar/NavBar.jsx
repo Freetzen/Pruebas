@@ -25,24 +25,8 @@ const NavBar = ({setLocalData}) => {
     localStorage.setItem('language', lang);
 
   };
-  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  React.useEffect(() => {
-    const handleFocusChange = (event) => {
-      if (
-        event.target !== document.querySelector(".dropdown-content") &&
-        isDropdownOpen
-      ) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    window.addEventListener("focus", handleFocusChange);
-
-    return () => {
-      window.removeEventListener("focus", handleFocusChange);
-    };
-  }, [isDropdownOpen]);
 
   const [isVisible, setIsVisible] = useState(false);
 
