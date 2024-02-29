@@ -18,11 +18,7 @@ const LoginButton = ({setLocalData}) => {
 
   const [obj, setObj] = useState({})
 
-console.log('OBJ ---------->' , obj)
-
-
-
-
+  console.log('OBJ ---------->' )
 
 
   useEffect(() => {
@@ -36,27 +32,6 @@ console.log('OBJ ---------->' , obj)
     }
     loadData()
   }, [obj])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -84,6 +59,7 @@ console.log('OBJ ---------->' , obj)
 
 
   const handleLogin = () => {
+
     loginWithRedirect() 
  }
 
