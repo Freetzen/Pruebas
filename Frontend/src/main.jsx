@@ -28,6 +28,7 @@ i18next.init({
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
   <Provider store={store}>
     <BrowserRouter>
       <Auth0Provider
@@ -43,4 +44,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </Auth0Provider>
     </BrowserRouter>
   </Provider>
+  </React.StrictMode>
 );
