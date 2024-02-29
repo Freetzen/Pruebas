@@ -26,8 +26,8 @@ const LoginButton = ({setLocalData}) => {
         email: user?.email,
         image: user?.picture
       }
-     userDate('info', newUser)
-     setLocalData(newUser)
+      const setUserLocal = localStorage.setItem('info', JSON.stringify(newUser))
+     setLocalData(setUserLocal)
 
     } catch (error) {
       console.error('Error al enviar los datos del usuario al servidor:', error);
