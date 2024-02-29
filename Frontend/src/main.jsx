@@ -11,11 +11,9 @@ import global_es from "./i18n/es/global.json";
 import global_en from "./i18n/en/global.json";
 import global_fr from "./i18n/fr/global.json";
 
-const storedLanguage = localStorage.getItem("language") || "en";
 
 i18next.init({
   interpolation: { escapeValue: false },
-  lng: storedLanguage,
   resources: {
     en: {
       global: global_en,

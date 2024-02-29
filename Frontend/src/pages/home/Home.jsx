@@ -15,42 +15,23 @@ const Home = ({ loading, setLoading }) => {
   const [totalReviews, setTotalReviews] = useState([])
 
 
-  useEffect(() => {
-    const bringData = async () => {
-      try {
-        const response = await reviewsProvider.getReview()
-        setTotalReviews(response)
-        const sortingResponse = response.slice(-4);
-        setMessages(sortingResponse);
-      } catch (error) {
-        console.error(`Se produjo un error: ${error}`);
-      } finally {
-        setTimeout(() => {
-          setLoading(false)
-        }, 4000);
-      }
-    }
 
-    bringData()
-  }, []);
 
 
 
   return (
     <>
-      {loading ? (
-        <SpinnerConLogo />
-      ) : (
+      
         <>
           <Header />
           <AboutUs setLoading={setLoading} />
           <Skills />
           <Highlights />
           <StartQuote />
-          <Review totalReviews={totalReviews} messages={messages} />
+          {/* <Review totalReviews={totalReviews} messages={messages} /> */}
           <Footer />
         </>
-      )}
+    
     </>
   );
 

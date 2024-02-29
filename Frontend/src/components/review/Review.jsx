@@ -14,14 +14,12 @@ export default function Review({ totalReviews, messages }) {
   const [userPreference, setUserPreference] = useState({});
   const user = useSelector(state => state.userData);
 
-  const userHasPreference = async () => {
+ /*  const userHasPreference = async () => {
     const preference = await preferenceProvider.getPreferenceByEmail(user?.email);
     setUserPreference(preference);
-  }
+  } */
 
-  useEffect(() => {
-    userHasPreference()
-  }, []);
+
 
   return (
     <div className={style.container}>
@@ -38,15 +36,15 @@ export default function Review({ totalReviews, messages }) {
         <ReviewsButton />
       </div>
 
-      { userPreference?.email ? (
+
         <div className={style.containerTitle}>
           <ReviewForm />
         </div>
-      ) : (
+
         <div className={style.H3andButton}>
             <h3>{t("RatingHome.NotBuyer")} </h3>
         </div>
-      )}
+
     </div>
   );
 }
