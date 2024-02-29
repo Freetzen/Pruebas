@@ -26,8 +26,6 @@ axios.defaults.baseURL = 'https://pruebas-production-2c83.up.railway.app/'
 
 function App() {
   const data = useSelector(state => state.userData)
-  const [selectedOptions, setSelectedOptions] = useState([])
-  const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
   const localStorageUser = getUserData()
   const [localData, setLocalData] = useState(localStorageUser)
@@ -47,15 +45,12 @@ function App() {
  console.log(data)
   return (
     <>
-      {location.pathname !== '/admin'
-        && location.pathname !== '/createProject'
-        && location.pathname !== '/createUser'
-        && location.pathname !== '/useraccount'
-        && location.pathname !== '/spinner'
-        && location.pathname !== '/quote'
-        && <NavBar setLocalData={setLocalData}/>}
+      <NavBar setLocalData={setLocalData}/>
 
-      <Routes>
+      <Home/>
+
+
+  {/*     <Routes>
         <Route path="/" element={<Home loading={loading} setLoading={setLoading} />}></Route>
         <Route path="/quote" element={<Quote />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
@@ -70,7 +65,7 @@ function App() {
         <Route path="*" element={<NotFound />}></Route>
         <Route path="/payment" element={<Payment />}></Route>
 
-      </Routes>
+      </Routes> */}
 
     </>
   )
