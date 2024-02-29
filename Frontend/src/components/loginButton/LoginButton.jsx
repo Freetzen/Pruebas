@@ -16,9 +16,9 @@ const LoginButton = ({setLocalData}) => {
   const data = useSelector(state => state.userData)
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
-  const [obj, setObj] = useState()
+  const [obj, setObj] = useState({})
 
-
+console.log('OBJ ---------->' , obj)
 
 
 
@@ -29,7 +29,7 @@ const LoginButton = ({setLocalData}) => {
     const loadData = async() => {
       try {
         const userDB = await userProvider.getUserByEmail(user.email)
-        return dispatch(loadUserData(userDB))
+        await dispatch(loadUserData(userDB))
       } catch (error) {
         console.log(error.message)
       }
