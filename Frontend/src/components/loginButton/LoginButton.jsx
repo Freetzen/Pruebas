@@ -28,7 +28,7 @@ console.log('OBJ ---------->' , obj)
   useEffect(() => {
     const loadData = async() => {
       try {
-        const userDB = await userProvider.getUserByEmail(user.email)
+        const userDB = await userProvider.getUserByEmail(obj.email)
         await dispatch(loadUserData(userDB))
       } catch (error) {
         console.log(error.message)
@@ -69,7 +69,8 @@ console.log('OBJ ---------->' , obj)
         image: user?.picture
       }
       userDate('info', newUser)
-      setObj(newUser)
+      const dat = await getUserData()
+      setObj(dat)
      setLocalData(setUserLocal)
 
     } catch (error) {
