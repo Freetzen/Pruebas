@@ -27,12 +27,11 @@ axios.defaults.baseURL = 'https://pruebas-production-2c83.up.railway.app/'
 
 function App() {
   const data = useSelector(state => state.userData)
-  const dispatch = useDispatch()
-  const localStorageUser = getUserData()
+ /*  const dispatch = useDispatch()
+  const localStorageUser = getUserData() */
   const [localData, setLocalData] = useState(localStorageUser)
   const location = useLocation()
   const {user} = useAuth0()
-  console.log('LOCAL DATA ------------> ' , localData)
   
   /* useEffect(() => {
     const loadData = async() => {

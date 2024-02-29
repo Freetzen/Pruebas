@@ -11,15 +11,30 @@ import { FiMenu } from 'react-icons/fi';
 import { UserAccountMobile } from "../userAccountMobile/UserAccountMobile";
 import logoNav from '../../../public/images/logo-nav.png'
 import { useSelector } from "react-redux";
+import userProvider from "../../utils/provider/userProvider/userProvider";
 
 
 
 const NavBar = ({setLocalData}) => {
 
+  const [obj, setObj] = useState({})
+
+  useEffect(() => {
+    const loadData = async() => {
+      try {
+        const userDB = await userProvider.getUserByEmail(obj.email)
+        await dispatch(loadUserData(userDB))
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+    loadData()
+  }, [obj])
+
   return (
     <div className={style.NavBarContainer}>
     
-          <LoginButton setLocalData={setLocalData}/>
+          <LoginButton setLocalData={setLocalData} setObj={setObj}/>
         
     </div>
   );

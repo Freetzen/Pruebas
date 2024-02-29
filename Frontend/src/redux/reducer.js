@@ -10,7 +10,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_USER_DATA:
-      console.log('STATE DATA REDUCER --------------->', state)
       return {
         ...state,
         userData: action.payload,

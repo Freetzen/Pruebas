@@ -12,26 +12,9 @@ import { loadUserData } from "../../redux/actions";
 
 
 
-const LoginButton = ({setLocalData}) => {
+const LoginButton = ({setLocalData, setObj}) => {
   const data = useSelector(state => state.userData)
-  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
-
-  const [obj, setObj] = useState({})
-
-  console.log('OBJ ---------->' )
-
-
-  useEffect(() => {
-    const loadData = async() => {
-      try {
-        const userDB = await userProvider.getUserByEmail(obj.email)
-        await dispatch(loadUserData(userDB))
-      } catch (error) {
-        console.log(error.message)
-      }
-    }
-    loadData()
-  }, [obj])
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0()
 
 
 
