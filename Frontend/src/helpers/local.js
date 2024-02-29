@@ -1,5 +1,4 @@
 export const userDate = (key, elements) => {
-    console.log("userDate elements",elements)
     const getUserLocal = JSON.parse(localStorage.getItem('info'));
     if(!getUserLocal?.email){
         const setUserLocal = localStorage.setItem(key, JSON.stringify(elements))   
