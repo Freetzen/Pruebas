@@ -23,13 +23,13 @@ const Home = ({ loading, setLoading }) => {
     <>
       
         <>
-          <Header />
+          {/* <Header />
           <AboutUs setLoading={setLoading} />
           <Skills />
           <Highlights />
           <StartQuote />
-          {/* <Review totalReviews={totalReviews} messages={messages} /> */}
-          <Footer />
+           <Review totalReviews={totalReviews} messages={messages} /> 
+          <Footer /> */}
         </>
     
     </>
