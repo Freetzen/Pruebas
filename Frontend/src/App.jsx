@@ -34,7 +34,7 @@ function App() {
   const {user} = useAuth0()
   console.log('LOCAL DATA ------------> ' , localData)
   
-  useEffect(() => {
+  /* useEffect(() => {
     const loadData = async() => {
       try {
         const userDB = await userProvider.getUserByEmail(localData.email)
@@ -44,7 +44,7 @@ function App() {
       }
     }
     loadData()
-  }, [])
+  }, []) */
  console.log('DATA ------------> ' , data)
   return (
     <>

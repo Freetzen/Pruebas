@@ -16,9 +16,51 @@ const LoginButton = ({setLocalData}) => {
   const data = useSelector(state => state.userData)
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
+  const [obj, setObj] = useState()
+
+
+
+
+
+
+
 
   useEffect(() => {
+    const loadData = async() => {
+      try {
+        const userDB = await userProvider.getUserByEmail(user.email)
+        return dispatch(loadUserData(userDB))
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+    loadData()
+  }, [obj])
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  useEffect(() => {
   const postUserData = async () => {
     try {
       const newUser = {
@@ -26,7 +68,8 @@ const LoginButton = ({setLocalData}) => {
         email: user?.email,
         image: user?.picture
       }
-      const setUserLocal = localStorage.setItem('info', JSON.stringify(newUser))
+      userDate('info', newUser)
+      setObj(newUser)
      setLocalData(setUserLocal)
 
     } catch (error) {
