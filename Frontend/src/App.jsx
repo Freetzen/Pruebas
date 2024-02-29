@@ -20,6 +20,7 @@ import userProvider from './utils/provider/userProvider/userProvider'
 import { getUserData } from './helpers/local'
 import { useDispatch, useSelector } from 'react-redux'
 import { loadUserData } from './redux/actions'
+import { useAuth0 } from '@auth0/auth0-react'
 
 axios.defaults.baseURL = 'https://pruebas-production-2c83.up.railway.app/'
 
@@ -30,6 +31,7 @@ function App() {
   const localStorageUser = getUserData()
   const [localData, setLocalData] = useState(localStorageUser)
   const location = useLocation()
+  const {user} = useAuth0()
   
   useEffect(() => {
     const loadData = async() => {
@@ -41,7 +43,7 @@ function App() {
       }
     }
     loadData()
-  }, [])
+  }, [user])
  console.log('DATA ------------> ',data)
   return (
     <>
