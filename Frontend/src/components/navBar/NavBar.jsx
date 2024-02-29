@@ -19,16 +19,6 @@ const NavBar = ({setLocalData}) => {
   const data = useSelector(state => state.userData);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 680);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   const [t, i18n] = useTranslation("global");
   const handleChangeLanguage = (lang) => {
     i18next.changeLanguage(lang);

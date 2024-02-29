@@ -42,7 +42,7 @@ function App() {
     }
     loadData()
   }, [localData])
- console.log(data)
+ console.log('DATA ------------> ',data)
   return (
     <>
       <NavBar setLocalData={setLocalData}/>
