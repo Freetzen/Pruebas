@@ -33,52 +33,19 @@ const LoginButton = ({setLocalData}) => {
      userDate('info', newUser)
      setLocalData(newUser)
 
-      if(user){
-        const Response = await userProvider.getUserByEmail(user.email)
-        if(!Response) { 
-          const newUser1 = await userProvider.createUser(newUser)
-          return newUser1 
-        }
-        if(Response.banned){
-          Swal.fire({
-            icon: "error",
-            title: t("LoginButton.bannedAlert"),
-            text: t("LoginButton.bannedAlertContact"),
-            footer: `<a href="https://wedevelop.vercel.app/contact">${t("LoginButton.bannedWhy")}</a>`
-          });
-          setTimeout(() => {
-            logout()
-          }, 6000);
-          clearLocalStorage()
-        }
-      }
     } catch (error) {
       console.error('Error al enviar los datos del usuario al servidor:', error);
     }
   };
   postUserData()
-}, [user, isAuthenticated])
+}, [user])
 
 
-  useEffect(() => {
-    if (isAuthenticated && user) {
-      setLoading(true);
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 1000);
 
-      return () => clearTimeout(timer);
-    }
-  }, [])
 
   const handleLogin = () => {
     loginWithRedirect() 
  }
-  
-
-  const activeMenu = () => {
-    setMenuIsActive(!menuIsActive)
-  }
 
 
   return (
@@ -87,13 +54,12 @@ const LoginButton = ({setLocalData}) => {
         <button className={style.buttonLogin} onClick={handleLogin}>{t("LoginButton.title")}</button>
       ) : (
         <>
-        <UserAccount menuIsActive={menuIsActive} activeMenu={activeMenu}/>
+        <UserAccount/>
         <div className={style.containerButtonUser} >
           <div className={style.containerSpinner} style={loading ? {display: ''} : {display: 'none'}} >
-            <SpinnerLogin />
           </div>
           <div className={style.containerNameAndButton} style={loading ? {display: 'none'} : {display: ''}}>
-            <button onClick={activeMenu}>
+            <button>
               {data?.name}
             </button>
             <img src={data.image} alt=""></img>
