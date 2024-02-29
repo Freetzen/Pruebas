@@ -4,7 +4,6 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import style from './Payment.module.css'
 import { FcApproval } from "react-icons/fc";
 import { FcHighPriority } from "react-icons/fc";
-import { useTranslation } from "react-i18next";
 import userProvider from '../../utils/provider/userProvider/userProvider';
 import { useDispatch } from 'react-redux';
 import { loadUserData } from '../../redux/actions';

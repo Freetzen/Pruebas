@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useAuth0 } from "@auth0/auth0-react";
-import userProvider from "../../utils/provider/userProvider/userProvider";
-import style from './LoginButton.module.css'
-import SpinnerLogin from "../spinners/spinnerLogin/SpinnerLogin";
+
 import { UserAccount } from "../../pages/userAccount/UserAccount";
-import Swal from 'sweetalert2'
-import { useTranslation } from "react-i18next";
-import { clearLocalStorage, getUserData, userDate } from "../../helpers/local";
-import { loadUserData } from "../../redux/actions";
+
+import { getUserData, userDate } from "../../helpers/local";
+
 
 
 
@@ -49,7 +46,7 @@ const LoginButton = ({setLocalData, setObj}) => {
 
   return (
     <div >
-      {!data?.email ? (
+      {!data.email ? (
         <button  onClick={handleLogin}>LoginButton</button>
       ) : (
         <>

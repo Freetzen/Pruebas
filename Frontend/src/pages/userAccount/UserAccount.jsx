@@ -3,7 +3,6 @@ import style from "./UserAccount.module.css"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import userProvider from "../../utils/provider/userProvider/userProvider";
-import { useTranslation } from "react-i18next";
 import { clearLocalStorage } from "../../helpers/local";
 import { useSelector } from "react-redux";
 

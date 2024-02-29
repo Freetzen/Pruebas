@@ -4,7 +4,6 @@ import projectsProvider from "../../utils/provider/projectsProvider/projectsProv
 import { useEffect, useState } from "react";
 import PaginateProyect from "../../components/paginateProject/PaginateProyect";
 import Select from 'react-select';
-import { useTranslation } from 'react-i18next';
 import texto from './../../../public/images/texto.png'
 
 export default function Projects({ setSelectedOptions, selectedOptions }) {

@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './NotFound.module.css'
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 
 const NotFound = () => {
   const [t, i18n] = useTranslation("global");

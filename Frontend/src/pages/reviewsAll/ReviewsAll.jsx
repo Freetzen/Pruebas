@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import reviewsProvider from "../../utils/provider/reviewsProvider/reviewsProvider";
 import ReviewCard from "../../components/reviewCard/ReviewCard";
 import PaginateReviews from "../../components/paginateReviews/PaginateReviews";
-import { useTranslation } from "react-i18next";
 
 export default function ReviewsAll() {
   const [t, i18n] = useTranslation("global");

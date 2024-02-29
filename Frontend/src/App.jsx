@@ -1,25 +1,14 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import {useLocation } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/navBar/NavBar'
 import Home from './pages/home/Home'
-import { Quote } from './pages/quote/Quote'
-import ContactUs from './pages/contactUs/ContactUs'
-import Projects from './pages/projects/Projects'
-import AdminWindow from './pages/adminWindow/AdminWindow'
-import CreateProject from './components/adminUtils/createProject/CreateProject'
-import ProjectDetails from './components/details/DetailProyects'
-import ReviewsAll from './pages/reviewsAll/ReviewsAll'
-import UserAdmin from './components/adminUtils/usersAdmin/UserAdmin'
-import NotFound from './pages/notFound/NotFound'
-import AdminDetail from './components/adminUtils/adminDetail/AdminDetail'
+
 import { useState } from 'react'
-import { Payment } from './pages/payment/Payment'
+
 import axios from 'axios'
-import { useEffect } from 'react'
-import userProvider from './utils/provider/userProvider/userProvider'
-import { getUserData } from './helpers/local'
-import { useDispatch, useSelector } from 'react-redux'
-import { loadUserData } from './redux/actions'
+
+import {useSelector } from 'react-redux'
+
 import { useAuth0 } from '@auth0/auth0-react'
 
 axios.defaults.baseURL = 'https://pruebas-production-2c83.up.railway.app/'
@@ -29,7 +18,7 @@ function App() {
   const data = useSelector(state => state.userData)
  /*  const dispatch = useDispatch()
   const localStorageUser = getUserData() */
-  const [localData, setLocalData] = useState(localStorageUser)
+  const [localData, setLocalData] = useState()
   const location = useLocation()
   const {user} = useAuth0()
   

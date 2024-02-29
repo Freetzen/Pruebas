@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import NavBar from "../../components/navBar/NavBar";
-import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 export const Quote = () => {
