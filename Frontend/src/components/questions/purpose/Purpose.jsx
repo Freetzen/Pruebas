@@ -12,16 +12,28 @@ export const Purpose = ({ quote, setQuote, question, setQuestion, setProgressBar
       ...quote,
       'purpose': valueClick
     })
-
     if (valueClick === 'web') {
-      setProgressBar(progressBar + 20)
-      setQuestion(question + 1)
+      if (quote.extraRequeriments == null) {
+        setProgressBar(progressBar + 20)
+        setQuestion(question + 1)
+      }
+      else {
+        setQuote({
+          ...quote,
+          'amountOfProducts': null,
+          'purpose': valueClick
+        })
+        setQuestion(11)
+      }
     } else {
-      setProgressBar(progressBar + 10)
-      setQuestion(question + 1)
+
+      if (quote.extraRequeriments == null) {
+        setProgressBar(progressBar + 10)
+        setQuestion(question + 1)
+      }
+      else setQuestion(11)
 
     }
-
   }
 
   return (

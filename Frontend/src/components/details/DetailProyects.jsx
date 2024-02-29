@@ -39,20 +39,23 @@ export default function ProjectDetails() {
 
   return (
     <div className={style.detailsContainer}>
-      <div className={style.detailproduct}>
-        <div className={style.detailsLeft}>
-          <div><h2>{projectById.name}</h2></div>
-          <img src={projectById.images} alt={projectById.name} className="imgDetails" style={{ width: '500px' }} />
-        </div>
-        <div className={style.detailsRight}>
-          <h5><strong>{t("Projects.projectsDetails.title")}</strong> {projectById.category}</h5>
-          <p>{projectById.description}</p>
-          <div className={style.buttonsContainer}>
-            <button onClick={backToHome} className={style.button1}>{t("Projects.projectsDetails.back")}</button>
-            <button onClick={goToQuote} className={style.button2}>{t("Projects.projectsDetails.quote")}</button>
+      <div className={style.containerImage}>
+        <img src={projectById.images} alt={projectById.name} className="imgDetails" />
+      </div>
+      <div className={style.containerInfo}>
+        <div className={style.containerTitle}>
+          <h2>{projectById.name}</h2>
+          <span><strong>{t("Projects.projectsDetails.title")}</strong> {projectById.category}</span>
           </div>
+          <div className={style.containerDescription}>
+            <p>{projectById.description}</p>
+          </div>
+        <div className={style.buttonsContainer}>
+          <button onClick={backToHome} className={style.button1}>{t("Projects.projectsDetails.back")}</button>
+          <button onClick={goToQuote} className={style.button2}>{t("Projects.projectsDetails.quote")}</button>
         </div>
       </div>
+
     </div>
   );
 }

@@ -25,8 +25,11 @@ export const Support = ({ quote, setQuote, question, setQuestion, progressBar, s
       'support': valueClick
     });
     setShowOptions(false);
-    setQuestion(question + 1);
-    setProgressBar(progressBar + 10)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
 
   };
 

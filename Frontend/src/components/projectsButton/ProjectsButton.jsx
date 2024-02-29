@@ -9,9 +9,7 @@ export default function ProyectsButton() {
     return(
      <div className={style.container}>
         <Link to="/projects">
-
             <button className={style.boton}>{t("Highlights.ProjectsButton")}</button>
-
        </Link>
      </div>
       

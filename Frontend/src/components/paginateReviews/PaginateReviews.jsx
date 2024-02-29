@@ -1,6 +1,8 @@
 import style from './PaginateReviews.module.css';
+import { useTranslation } from "react-i18next";
 
 const PaginateReviews = ({totalInfo, bringData, dataInit, rating}) => {
+  const [t, i18n] = useTranslation("global");
 
   const handleNext = async() => {
       if(rating === "All") {
@@ -21,9 +23,9 @@ const PaginateReviews = ({totalInfo, bringData, dataInit, rating}) => {
 
   return (
     <div className={style.container}>
-        <button className={totalInfo.hasPrevPage ? style.boton : style.disabled} onClick={handlePrev} disabled={!totalInfo.hasPrevPage}> Previous</button>
-         <span className={style.txtPaginado}>{`Page ${totalInfo.page} of ${totalInfo.totalPages}`}</span>
-        <button className={totalInfo.hasNextPage ? style.boton : style.disabled} onClick={handleNext} disabled={!totalInfo.hasNextPage}> Next</button> 
+        <button className={totalInfo.hasPrevPage ? style.boton : style.disabled} onClick={handlePrev} disabled={!totalInfo.hasPrevPage}> {t("RatingHome.ReviewsAll.paginatePrev")}</button>
+         <span className={style.txtPaginado}>{`${t("RatingHome.ReviewsAll.paginatePage")} ${totalInfo.page} ${t("RatingHome.ReviewsAll.paginateOf")} ${totalInfo.totalPages}`}</span>
+        <button className={totalInfo.hasNextPage ? style.boton : style.disabled} onClick={handleNext} disabled={!totalInfo.hasNextPage}>  {t("RatingHome.ReviewsAll.paginateNext")}</button> 
     </div>
   )
 }

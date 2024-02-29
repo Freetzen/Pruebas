@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import PaginateProyect from "../../components/paginateProject/PaginateProyect";
 import Select from 'react-select';
 import { useTranslation } from 'react-i18next';
+import texto from './../../../public/images/texto.png'
 
 export default function Projects({ setSelectedOptions, selectedOptions }) {
   const [t, i18n] = useTranslation("global");
@@ -54,26 +55,33 @@ export default function Projects({ setSelectedOptions, selectedOptions }) {
 
   return (
     <div className={style.projectsContainer}>
-     <div className={style.selectContainer}>
-     <Select
-        isMulti
-        value={selectedOptions}
-        onChange={handleChange}
-        options={formattedOptions}
-        className={style.selectOptions}
-      />
-     </div>
-
-      <div className={style.proyectos}>
-        {
-          projects.map((proyecto, index) => <ProjectsCard key={index} project={proyecto} />)
-        }
+      <div className={style.Title}>
+        <img src={texto} alt="" />
       </div>
 
-      <div>
-        <PaginateProyect bringData={bringData} dataInit={dataInit} totalInfo={totalInfo} selectedOptions={selectedOptions} />
-      </div>
+      <div className={style.containerProject}>
+        <div className={style.selectContainer}>
+          <Select
+            isMulti
+            value={selectedOptions}
+            onChange={handleChange}
+            options={formattedOptions}
+            className={style.selectOptions}
+          />
+        </div>
 
+
+        <div className={style.proyectos}>
+          {
+            projects.map((proyecto, index) => <ProjectsCard key={index} project={proyecto} />)
+          }
+        </div>
+
+        <div className={style.paginate}>
+          <PaginateProyect bringData={bringData} dataInit={dataInit} totalInfo={totalInfo} selectedOptions={selectedOptions} />
+        </div>
+
+      </div>
     </div>
   )
 }

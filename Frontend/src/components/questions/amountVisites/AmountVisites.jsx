@@ -11,8 +11,11 @@ export const AmountVisites = ({ quote, setQuote, question, setQuestion, progress
       ...quote,
       'amountOfVisits': valueClick
     })
-    setQuestion(question + 1)
-    setProgressBar(progressBar + 10)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
   }
 
   return (

@@ -35,7 +35,6 @@ const Footer = () => {
       }
 
       const responseData = await response.json();
-      console.log(responseData);
     } catch (error) {
       setError(error.message);
     }
@@ -62,7 +61,7 @@ const Footer = () => {
         <div className={style.footerNavigation}>
           <h4>{t("Footer.Navigation.title")}</h4>
           <div className={style.link}>
-            <Link to={"/"}>{t("Footer.Navigation.Home")}</Link>
+          <a href="#" onClick={() => window.scrollTo(0, 0)}>{t("Footer.Navigation.Home")}</a>
             <Link to={"/quote"}>{t("Footer.Navigation.Quote")}</Link>
             <Link to={"/projects"}>{t("Footer.Navigation.Projects")}</Link>
             <Link to={"/contact"}>{t("Footer.Navigation.ContactUs")}</Link>

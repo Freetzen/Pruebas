@@ -12,21 +12,22 @@ import { LegalNorm } from '../questions/legalNorm/LegalNorm'
 import { Language } from '../questions/language/Language'
 import { ResumeQuestions } from '../resumeQuestions/ResumeQuestions'
 import BarProgress from './barProgress/BarProgress'
-import Pricing from '../pricing/Pricing'
+import Pricing from '../pricing/pricing/Pricing'
 import SpinnerResumen from '../spinners/spinnerResumen/SpinnerResumen'
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { Link } from 'react-router-dom'
+import planProvider from '../../utils/provider/planProvider/planProvider'
 
 
 
 export const Section = ({ quote, setQuote }) => {
   const [question, setQuestion] = useState(1)
   const [progressBar, setProgressBar] = useState(0)
+  const [plan, setPlan] = useState([])
   const [loading, setLoading] = useState(false)
   const [showPrevious, setShowPrevious] = useState(false);
   const [showNext, setShowNext] = useState(true);
-
-  const array = Object.keys(quote)
 
   useEffect(() => {
     setLoading(!loading);
@@ -41,16 +42,38 @@ export const Section = ({ quote, setQuote }) => {
   }, [progressBar, question]);
 
   const handlePrevious = () => {
-    setProgressBar(progressBar - 10)
     setQuestion(question - 1);
   };
 
   const handleNext = () => {
     setQuestion(question + 1);
-    setProgressBar(progressBar + 10)
   };
 
+  useEffect(() => {
+    const planSearch = async () => {
+      let web = {
+          type: 'Web'
+      }
 
+      let ECommerce = {
+          type: 'E-commerce'
+      }
+      
+      if(quote.purpose === 'web'){
+          const planWeb = await planProvider.getPlanByType(web)
+          setPlan(planWeb)
+          return planWeb
+      }
+      if(quote.purpose === 'ecommerce'){
+          const planECommerce = await planProvider.getPlanByType(ECommerce)
+          setPlan(planECommerce)
+          return planECommerce
+      }
+    }
+
+    planSearch()
+
+  }, [quote])
 
   const switchQuestion = (question) => {
 
@@ -82,7 +105,7 @@ export const Section = ({ quote, setQuote }) => {
       case 11:
         return <ResumeQuestions progressBar={progressBar} setProgressBar={setProgressBar} quote={quote} setQuote={setQuote} setQuestion={setQuestion} question={question} />
       case 12:
-        return <Pricing progressBar={progressBar} setProgressBar={setProgressBar} quote={quote} />
+        return <Pricing progressBar={progressBar} setProgressBar={setProgressBar} quote={quote} plan={plan}/>
       default:
         return <></>
 
@@ -95,21 +118,31 @@ export const Section = ({ quote, setQuote }) => {
       <div className={style.container}>
         <div className={style.ContainerQuestions}>
           <div className={style.containerImg}>
-            <img src='./images/LogoResumen.png' alt="" />
-            <div className={style.containerButtons}>
+            <Link to='/'> <img src='./images/LogoResumen.png' alt="" /> </Link>
+            {
+              question === 12
+              ? null
+              :
+              <div className={style.containerButtons}>
               <button onClick={handlePrevious}
                 title='Previous'
                 disabled={!showPrevious}
                 style={!showPrevious ? { color: 'rgba(240, 248, 255, 0.555)' } : { color: 'aliceblue' }}>
                 <IoIosArrowDropleftCircle />
               </button>
-              <button onClick={handleNext}
+              {
+                question === 11
+                ? null
+                :
+                <button onClick={handleNext}
                 title='Next'
                 disabled={!showNext}
                 style={!showNext ? { color: 'rgba(240, 248, 255, 0.555)' } : { color: 'aliceblue' }}>
                 <IoIosArrowDroprightCircle />
               </button>
+              }
             </div>
+            }
           </div>
         </div>
         <div className={style.containerQuoteAndBar}>

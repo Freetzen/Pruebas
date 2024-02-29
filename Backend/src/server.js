@@ -1,4 +1,4 @@
-/* const express = require("express");
+const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const router = require("./routes");
@@ -36,4 +36,4 @@ server.use(router);
 
 
 
-module.exports = server; */
+module.exports = server; 

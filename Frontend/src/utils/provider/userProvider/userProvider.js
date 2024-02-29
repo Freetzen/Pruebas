@@ -46,6 +46,15 @@ const userProvider = {
         }
     },
 
+    async putUserPreference(info) {
+        try {
+            const newPreferenceUser = await axios.put(`/userPreference`, info)
+            return newPreferenceUser.data
+        } catch (error) {
+            return error.message
+        }
+    },
+
     async bannedUser(id) {
         try {
             const newUserAdmin = await axios.put(`/userbanned/${id}`)

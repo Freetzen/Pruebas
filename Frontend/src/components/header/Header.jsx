@@ -1,42 +1,55 @@
-import style from './Header.module.css';
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import style from "./Header.module.css";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [t, i18n] = useTranslation("global");
-  const [wordIndex, setWordIndex] = useState(0);
-  const [words, setWords] = useState([]);
+  // const [wordIndex, setWordIndex] = useState(0);
+  // const [words, setWords] = useState([]);
 
-  const fetchTranslatedWords = () => {
-    const translatedWords = [t("Header.change.word1"), t("Header.change.word2"), t("Header.change.word3"), t("Header.change.word4")];
-    setWords(translatedWords);
-    setWordIndex(Math.floor(Math.random() * translatedWords.length));
-  };
+  // const fetchTranslatedWords = () => {
+  //   const translatedWords = [
+  //     t("Header.change.word1"),
+  //     t("Header.change.word2"),
+  //     t("Header.change.word3"),
+  //     t("Header.change.word4"),
+  //   ];
+  //   setWords(translatedWords);
+  //   setWordIndex(Math.floor(Math.random() * translatedWords.length));
+  // };
 
-  useEffect(() => {
-    fetchTranslatedWords();
+  // useEffect(() => {
+  //   fetchTranslatedWords();
 
-    const interval = setInterval(() => {
-      setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000);
+  //   const interval = setInterval(() => {
+  //     setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+  //   }, 3000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [t]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [t]);
 
   return (
     <div className={style.HeaderContainer}>
       <div className={style.titleContainer}>
-        <h1 className={style.h1}>{t("Header.title")} <span>{words[wordIndex]}</span></h1>
-        
+        <h1 className={style.h1}>
+          {t("Header.title")}{" "}
+          {/* <span>{words.length > 0 && t(`${words[wordIndex]}`)}</span> */}
+        </h1>
+
         <img src="./images/logo-header.png" alt="" />
       </div>
       <div className={style.ImgContainer}>
-        <img className={style.imgResponsive} src="./images/responsive.png" alt="resposive" />
+        <img
+          className={style.imgResponsive}
+          src="./images/responsive.png"
+          alt="resposive"
+        />
       </div>
       <div className={style.customshapedividerbottom1707406615}>
         <svg
+          className={style.svg}
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
@@ -49,7 +62,7 @@ const Header = () => {
         </svg>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

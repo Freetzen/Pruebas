@@ -26,9 +26,9 @@ const userSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  plan: {
-     type: Schema.ObjectId, 
-     ref: "preference"
+  preference: {
+     type: Object,
+     default: {}
   },
   createdAt: {
     type: Date,
@@ -36,6 +36,6 @@ const userSchema = new Schema({
   },
 });
 
-const userModel = model("users", userSchema);
+const userModel = model("users", userSchema)
 
 module.exports = userModel;

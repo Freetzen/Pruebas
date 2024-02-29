@@ -2,10 +2,17 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import style from './Payment.module.css'
+import { FcApproval } from "react-icons/fc";
+import { FcHighPriority } from "react-icons/fc";
+import { useTranslation } from "react-i18next";
+import userProvider from '../../utils/provider/userProvider/userProvider';
+import { useDispatch } from 'react-redux';
+import { loadUserData } from '../../redux/actions';
 
 export const Payment = () => {
+    const [t, i18n] = useTranslation("global");
     const [paymentInfo, setPaymentInfo] = useState()
-
+    const dispatch = useDispatch()
     const location = useLocation()
     const params = new URLSearchParams(location.search)
     const payment_id = params.get('payment_id')
@@ -14,31 +21,57 @@ export const Payment = () => {
         payment_id: payment_id,
         preference_id: preference_id
     }
-    const yeison = async () => {
-        const { _id } = await axios('https://wedevelop-production.up.railway.app/successpayment', { params: obj })
-        const search = await axios('https://wedevelop-production.up.railway.app/getpreference', { params: _id })
+    const searchPay = async () => {
+        const { data } = await axios('https://wedevelop-production.up.railway.app/successpayment', { params: obj })
+        const value = { id: data._id }
+        const search = await axios('https://wedevelop-production.up.railway.app/getpreference', { params: value })
         setPaymentInfo(search.data)
     }
-    console.log(paymentInfo);
     useEffect(() => {
-        yeison()
+        searchPay()
     }, [])
+
+    const updateGlobalData = async () => {
+        const {data} = await userProvider.getUserByEmail(paymentInfo.email)
+        dispatch(loadUserData(data))
+    }
+    useEffect(() => {
+      updateGlobalData()
+    }, [paymentInfo])
+    
     return (
         <div>
             <div className={style.paymentContainer}>
-                <h1>     Payment Confirmation      </h1>
-                <h2>Payment number: {paymentInfo?.payId}</h2>
-                <h2>Service Name: {paymentInfo?.title}</h2>
-                <h2>Payment Type: {paymentInfo?.payment_type_id}</h2>
-                <h2>Payment Status: {paymentInfo?.status}</h2>
-                <h2>Payment Amount: ARS {paymentInfo?.amount}</h2>
-                <h2>Creation Date: {paymentInfo?.date_approved}</h2>
-                <h2>Payment Email: {paymentInfo?.email}</h2>
-            </div>
-            <div>
-                <Link to='/'>
-                    <button>Back to Home</button>
-                </Link>
+                <div className={style.containerBox}>
+                    <div className={style.confirmation}>
+                        {paymentInfo?.status === 'approved' ? <FcApproval className={style.iconStatus} /> : <FcHighPriority className={style.iconStatus} />}
+                        <span>{paymentInfo?.status}</span>
+                    </div>
+                    <div className={style.infoPayment}>
+                        <div className={style.containerTitle}>
+                            <h2>{t("PayStatus.title")}</h2>
+                        </div>
+                        <div className={style.info}>
+                            <p>{t("PayStatus.number")}</p>
+                            <span> {paymentInfo?.payId}</span>
+                            <p>{t("PayStatus.service")}</p>
+                            <span>{paymentInfo?.title}</span>
+                            <p>{t("PayStatus.type")}</p>
+                            <span> {paymentInfo?.payment_type_id}</span>
+                            <p>{t("PayStatus.amount")}</p>
+                            <span> {paymentInfo?.amount} ARG</span>
+                            <p>{t("PayStatus.creation")}</p>
+                            <span> {paymentInfo?.date_approved}</span>
+                            <p>{t("PayStatus.email")}</p>
+                            <span> {paymentInfo?.email}</span>
+                        </div>
+                        <div className={style.containerButton}>
+                            <Link to='/'>
+                                <button>{t("PayStatus.backHome")}</button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

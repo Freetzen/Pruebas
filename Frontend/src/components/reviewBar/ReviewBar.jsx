@@ -32,7 +32,7 @@ const ReviewBar = ({reviews}) => {
           
         
     return (
-        <ResponsiveContainer width='49%' height={300}>
+        <ResponsiveContainer width='49%' height={300} className={style.container}>
             <BarChart data={data} height={200} margin={{ top:25 }}>
                 <CartesianGrid stroke="grey" strokeDasharray="3 3" />
                 <XAxis dataKey='rating' />

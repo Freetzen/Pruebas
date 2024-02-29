@@ -4,18 +4,23 @@
     background-color: #EDEDED;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
 
 /* sideBar */
 
 .ContainerQuestions {
     background-image: url('../../../public/images/fondoQuestion.jpg');
-    background-attachment:fixed;
-    background-size:contain;
+    background-attachment: fixed;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 30%;
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -46,15 +51,6 @@
     color: rgb(240, 248, 255);
     cursor: pointer;
 }
-/* fomulario y barra de progreso */
-
-.container {
-    height:max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
 
 /* Cuestionario y Barra */
 
@@ -66,13 +62,35 @@
 
 .containerBar {
     border-bottom: 1px solid rgb(207, 207, 207);
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .containerQuote {
     width: auto;
     height: auto;
+}
+
+
+/* Estilos para mobile ----------------------------------------------------------*/
+
+@media only screen and (max-width: 680px) {
+   
+    .ContainerQuestions {
+        display: none;
+    }
+    
+    .containerQuoteAndBar {
+        height: calc(100vh - 50px);
+        padding: 0px 20px;
+        margin: 40px 0px;
+    }
+    
+    .containerQuote {
+        width: auto;
+        height: auto;
+    }
+    
 }

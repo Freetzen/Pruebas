@@ -4,7 +4,7 @@ const { findProject } = require("../services/projectService")
 const getProjects = async(req, res) => {
 try {
     let page = req.query.page
-    const limit = 10
+    const limit = 9
     const form = await findProject(page, limit)
     res.status(200).json(form)
 } catch (error) {

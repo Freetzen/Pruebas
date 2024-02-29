@@ -67,3 +67,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+@media only screen and (max-width: 680px) {
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+}	

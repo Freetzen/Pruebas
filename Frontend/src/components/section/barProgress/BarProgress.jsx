@@ -5,7 +5,6 @@ const BarProgress = ({progressBar}) => {
         <div className={style.bar}>
             <div className={style.porcentaje} style={{ width: `${progressBar}%` }}></div>
         </div>
-            <span>{progressBar}%</span>
         </div>
     )
 }

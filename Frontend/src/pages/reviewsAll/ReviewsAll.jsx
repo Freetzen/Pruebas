@@ -25,7 +25,7 @@ export default function ReviewsAll() {
       setReviews(response.docs);
       setTotalInfo(response);
     } catch(error) {
-      console.error(t("RatingHome.ReviewsAll.error1"), error);
+      console.error(error.message);
     }
   }
   
@@ -41,7 +41,7 @@ export default function ReviewsAll() {
       setReviews(response.docs);
       setTotalInfo(response);
     } catch(error) {
-      console.error(t("RatingHome.ReviewsAll.error2"), error);
+      console.error(error.message);
     }
   }
   
@@ -71,21 +71,21 @@ export default function ReviewsAll() {
 
       <div className={style.filtro}>
         <div>
-        <label>Filter by reviews:</label>
+        <label>{t("RatingHome.ReviewsAll.subTitle")}</label>
         <select onChange={handleRating}>
-          <option value="All">All reviews</option>
-          <option value="5">5 stars</option>
-          <option value="4">4 stars</option>
-          <option value="3">3 stars</option>
-          <option value="2">2 stars</option>
-          <option value="1">1 star</option>
+          <option value="All">{t("RatingHome.ReviewsAll.all")}</option>
+          <option value="5">{t("RatingHome.ReviewsAll.5stars")}</option>
+          <option value="4">{t("RatingHome.ReviewsAll.4stars")}</option>
+          <option value="3">{t("RatingHome.ReviewsAll.3stars")}</option>
+          <option value="2">{t("RatingHome.ReviewsAll.2stars")}</option>
+          <option value="1">{t("RatingHome.ReviewsAll.1star")}</option>
         </select>
         </div>
         <div>
-        <label>Order by:</label>
+        <label>{t("RatingHome.ReviewsAll.orderBy")}</label>
         <select onChange={handleSortOrder}>
-          <option value="recent">Most recent</option>
-          <option value="oldest">Oldest</option>
+          <option value="recent">{t("RatingHome.ReviewsAll.recent")}</option>
+          <option value="oldest">{t("RatingHome.ReviewsAll.oldest")}</option>
         </select>
       </div>
       </div>

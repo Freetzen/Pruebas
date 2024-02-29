@@ -2,16 +2,26 @@ import ReviewForm from "../reviewForm/ReviewForm";
 import ReviewCard from "../reviewCard/ReviewCard";
 import style from "./Review.module.css";
 import ReviewRating from "../reviewRating/ReviewRating";
-import { useAuth0 } from "@auth0/auth0-react";
 import ReviewBar from "../reviewBar/ReviewBar";
-import LoginButton from "../loginButton/LoginButton";
 import { useTranslation } from "react-i18next";
 import ReviewsButton from "../reviewsButton/ReviewsButton";
+import preferenceProvider from "../../utils/provider/preferenceProvider/preferenceProvider";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 export default function Review({ totalReviews, messages }) {
   const [t, i18n] = useTranslation("global");
+  const [userPreference, setUserPreference] = useState({});
+  const user = useSelector(state => state.userData);
 
-  const { isAuthenticated } = useAuth0();
+  const userHasPreference = async () => {
+    const preference = await preferenceProvider.getPreferenceByEmail(user?.email);
+    setUserPreference(preference);
+  }
+
+  useEffect(() => {
+    userHasPreference()
+  }, []);
 
   return (
     <div className={style.container}>
@@ -28,15 +38,13 @@ export default function Review({ totalReviews, messages }) {
         <ReviewsButton />
       </div>
 
-      {isAuthenticated ? (
+      { userPreference?.email ? (
         <div className={style.containerTitle}>
-          {/* <h2>Leave us a review</h2> */}
           <ReviewForm />
         </div>
       ) : (
         <div className={style.H3andButton}>
-          <h3>{t("RatingHome.NotLogged")} </h3>
-          <LoginButton />
+            <h3>{t("RatingHome.NotBuyer")} </h3>
         </div>
       )}
     </div>

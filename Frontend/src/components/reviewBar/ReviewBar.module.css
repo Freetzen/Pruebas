@@ -3,3 +3,13 @@
     border: 1px solid #ccc;
     padding: 10px;
   }
+
+
+  /* Estilos para mobile ---------------------------------------------------------- */
+
+@media only screen and (max-width: 680px) {
+
+  .container {
+    display: none;
+  }
+}

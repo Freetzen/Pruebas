@@ -21,8 +21,11 @@ export const ExtraRequeriments = ({ quote, setQuote, question, setQuestion, prog
         ...quote,
         'extraRequeriments': valueClick
       })
-      setQuestion(question + 1)
-      setProgressBar(progressBar + 10)
+      if (quote.extraRequeriments == null) {
+        setProgressBar(progressBar + 10)
+        setQuestion(question + 1)
+      }
+      else setQuestion(11)
     }
   }
 
@@ -32,8 +35,11 @@ export const ExtraRequeriments = ({ quote, setQuote, question, setQuestion, prog
       ...quote,
       'extraRequeriments': requeriment
     })
-    setQuestion(question + 1)
-    setProgressBar(progressBar + 10)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
   }
 
 

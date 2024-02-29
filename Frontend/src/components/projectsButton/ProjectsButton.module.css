@@ -33,3 +33,21 @@
 .boton:hover {
    font-size: 19px;
 }
+
+
+
+/* estilos mobile ----------------------------------------------------*/
+
+@media only screen and (max-width: 680px) {
+    
+    .boton {
+        font-size: 16px;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, .5);
+    }
+    
+    .boton:hover {
+       font-size: 16px;
+    }
+    
+
+}

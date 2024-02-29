@@ -22,7 +22,7 @@ export default function ReviewRating({ totalReviews }) {
     <div className={style.container}>
       <div className={style.subContainer}>
         <h2 className={style.rating}>{average?.toFixed(1)}</h2>
-        <h4>{t("RatingHome.rating")} {renderStars()}</h4>
+        <h4>{renderStars()}</h4>
         <p>({t("RatingHome.comments")}: {numReviews})</p>
       </div>
     </div>

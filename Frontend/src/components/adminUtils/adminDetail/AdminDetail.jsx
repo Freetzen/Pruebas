@@ -4,15 +4,24 @@ import style from "./AdminDetail.module.css";
 import userProvider from "../../../utils/provider/userProvider/userProvider";
 import projectsProvider from "../../../utils/provider/projectsProvider/projectsProvider";
 import Swal from 'sweetalert2'
+import pricingProvider from "../../../utils/provider/pricingProvider/pricingProvider";
 
 export default function AdminDetail({ detailState, setDetailState, setItemsToEdit }) {
     const [changes, setChanges] = useState({});
     const [isUser, setIsUser] = useState(true)
-
     useEffect(() => {
         let isMounted = true;
         const fetchData = async () => {
-            if (validator.isEmail(detailState)) {
+            if (typeof detailState === 'object') {
+                console.log('validadooooooooooooo');
+                const preference = await pricingProvider.getPreferenceById(detailState);
+                console.log('preference', preference);
+                if (isMounted) {
+                    setChanges(preference);
+                    setIsUser(true)
+                }
+            }
+            else if (typeof detailState === 'string' && validator.isEmail(detailState)) {
                 const user = await userProvider.getUserByEmail(detailState);
                 if (isMounted) {
                     setChanges(user);
@@ -81,7 +90,6 @@ export default function AdminDetail({ detailState, setDetailState, setItemsToEdi
             });
         } catch (error) { }
     };
-
 
     const [edit, setEdit] = useState(false)
 
@@ -165,8 +173,8 @@ export default function AdminDetail({ detailState, setDetailState, setItemsToEdi
                                         onChange={handleChange} />
                                 </div>
                                 <div className={style.containerButtons}>
-                                    <button onClick={() => setEdit(false)} style={edit ? { display: '' } : { display: 'none' }}>Cancelar</button>
-                                    <button onClick={handleEdit} style={edit ? { display: 'none' } : { display: '' }} >Editar</button>
+                                    <button onClick={() => setEdit(false)} style={edit ? { display: '' } : { display: 'none' }}>Cancel</button>
+                                    <button onClick={handleEdit} style={edit ? { display: 'none' } : { display: '' }} >Edi</button>
                                     <button onClick={sendprojectChanges} style={edit ? { display: '' } : { display: 'none' }} >Send</button>
                                 </div>
                             </div>

@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 const Skills = () => {
   const [t, i18n] = useTranslation("global");
 
-  const skills = ["Experience", "Creativity", "Attention to detail", "Professional", "Original designs", "Efficiency"]
+  const skills = ["Creativity", "Experience", "Attention to detail", "Professional", "Original designs", "Efficiency"]
 
   return (
     <div className={style.containerSkills}>

@@ -20,7 +20,7 @@ const createPreference = async (preference) => {
 
 const findPreferenceById = async (id) => {
     try {
-        const order = await preferenceModel.findOne({ idPay:  id  });
+        const order = await preferenceModel.findById(id);
         return order
     } catch (error) {
         throw new Error(error);

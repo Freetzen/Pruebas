@@ -3,19 +3,29 @@ import axios from "axios"
 const pricingProvider = {
     async createPreference(project) {
         try {
-            console.log('prov1', project)
             const response = await axios.post('/createpreference', project)
-            console.log('prov2')
-            const {id} = response.data
+            const { id } = response.data
             return id
-        }catch (error) {
+        } catch (error) {
             console.log(error.message)
         }
-    }
-
-
+    },
+    async getPreference() {
+        try {
+            const allPreferences = await axios.get(`/preference`)
+            return allPreferences.data
+        } catch (error) {
+            return error.message
+        }
+    },
+    async getPreferenceById(obj) {
+        try {
+            const { data } = await axios.get(`/getpreference`, { params: obj })
+            return data
+        } catch (error) {
+            return error.message
+        }
+    },
 }
-
-
 
 export default pricingProvider

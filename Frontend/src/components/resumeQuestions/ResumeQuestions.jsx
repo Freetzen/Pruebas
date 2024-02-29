@@ -1,13 +1,16 @@
 
 import style from './ResumeQuestions.module.css';
 import { GoQuestion } from "react-icons/go";
-import { MdOutlineEdit } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 
 export const ResumeQuestions = ({ quote, setQuestion, question, progressBar, setProgressBar }) => {
     const [t, i18n] = useTranslation("global");
-
-    const array = Object.keys(quote)
+    // const [array, setArray] = useState(Object.keys(quote))
+    let array = Object.keys(quote)
+    if (quote.purpose === 'web') {
+        array = array.filter(item => item !== 'amountOfProducts')
+    }
 
     const handleClick = (event) => {
         event.preventDefault()
@@ -15,7 +18,6 @@ export const ResumeQuestions = ({ quote, setQuestion, question, progressBar, set
             if (element === event.target.value) {
                 let indexPage = array.indexOf(element) + 1;
                 setQuestion(indexPage)
-                setProgressBar(progressBar - 10)
             }
         })
     }
@@ -39,10 +41,11 @@ export const ResumeQuestions = ({ quote, setQuestion, question, progressBar, set
                     </div>
                     {
                         array.map((e, index) => (
+
                             <div className={style.Question} key={index}>
                                 <div className={style.containerQuestionAndIcon}>
                                     <span className={style.question}>{e}</span>
-                                    <GoQuestion />
+                                    <span className={style.icono}><GoQuestion /></span>
                                 </div>
                                 <div className={style.containerQuestion}>
                                     <span className={style.answer}>{quote[e]}</span>
@@ -61,7 +64,7 @@ export const ResumeQuestions = ({ quote, setQuestion, question, progressBar, set
                 </div>
             </div>
             <div className={style.containerButtonResumen}>
-                <button onClick={() => setQuestion(question + 1)}>{t("QuoteQuestions.Summary.plans")}</button>
+            <button onClick={()=>setQuestion(question + 1)}>{t("QuoteQuestions.Summary.plans")}</button>
             </div>
         </div>
 

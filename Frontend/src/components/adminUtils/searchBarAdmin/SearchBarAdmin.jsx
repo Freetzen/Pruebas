@@ -5,6 +5,7 @@ import validator from 'validator'
 import userProvider from '../../../utils/provider/userProvider/userProvider';
 import projectsProvider from '../../../utils/provider/projectsProvider/projectsProvider';
 import { BsSearch } from "react-icons/bs";
+import pricingProvider from '../../../utils/provider/pricingProvider/pricingProvider';
 
 
 export default function SearchBarAdmin({ setItemsToEdit, itemsToEdit, setDetailState }) {
@@ -18,7 +19,7 @@ export default function SearchBarAdmin({ setItemsToEdit, itemsToEdit, setDetailS
 
     // }
     const handleClick = () => {
-        if (name === '') return window.alert('Debes ingresar un nombre')
+        if (name === '') return window.alert('You must enter a name')
         if (validator.isEmail(name)) getUsEmail(name)
         else {
             getProjectName(name)
@@ -35,6 +36,12 @@ export default function SearchBarAdmin({ setItemsToEdit, itemsToEdit, setDetailS
         const projectsResponse = await projectsProvider.getProjects()
         setItemsToEdit(projectsResponse.docs)
     }
+    const getSells = async () => {
+        setDetailState('')
+        const projectsResponse = await pricingProvider.getPreference()
+        setItemsToEdit(projectsResponse)
+    }
+
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             handleClick()
@@ -43,7 +50,7 @@ export default function SearchBarAdmin({ setItemsToEdit, itemsToEdit, setDetailS
     const getProjectName = async (name) => {
         setItemsToEdit([])
         const projectsResponse = await projectsProvider.getProjectByName(name)
-        if (projectsResponse.length === 0) return window.alert('No existen coincidencias con el nombre proporcionado')
+        if (projectsResponse.length === 0) return window.alert('There are no matches to the name provided.')
         else setItemsToEdit(projectsResponse)
     }
     const getUsEmail = async (email) => {
@@ -51,12 +58,10 @@ export default function SearchBarAdmin({ setItemsToEdit, itemsToEdit, setDetailS
         // if (name === '') return window.alert('Debes ingresar un nombre')
         const usersResponse = await userProvider.getUserByEmail(email)
         if (usersResponse === null) {
-            return window.alert('No existen coincidencias con el nombre proporcionado')
+            return window.alert('There are no matches to the name provided.')
         }
         else setItemsToEdit([usersResponse])
     }
-
-
 
     return (
         <div className={style.searBar}>
@@ -84,6 +89,7 @@ export default function SearchBarAdmin({ setItemsToEdit, itemsToEdit, setDetailS
                     <label htmlFor="">Show</label>
                     <button onClick={getUs}>Users</button>
                     <button onClick={getProjets}>Projects</button>
+                    <button onClick={getSells}>Sells</button>
                 </div>
 
                 <div className={style.buttons2}>

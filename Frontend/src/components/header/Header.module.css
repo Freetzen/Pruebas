@@ -54,7 +54,7 @@
   z-index: 50;
 }
 
-.customshapedividerbottom1707406615 svg {
+.customshapedividerbottom1707406615 .svg {
   display: block;
   width: calc(145% + 1.3px);
   height: 191px;
@@ -63,3 +63,61 @@
 .customshapedividerbottom1707406615 .shapefill {
   fill: aliceblue;
 }
+
+
+
+
+   /* Estilos para dispositivos móviles ------------------------------- */
+
+   @media only screen and (max-width: 680px) {
+
+    .HeaderContainer {
+      height: auto;
+      background-position: right;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      position: relative;
+      padding: 120px 20px;
+      padding-bottom: 60px;
+    }
+    
+    .titleContainer {
+      height: auto;
+      width: 100%;
+      justify-content: center;
+      align-items: start;
+      padding-left: 0;
+    }
+    
+    .h1 {
+      width: 75%;
+      height: auto;
+      font-size: 44px;
+      word-spacing: -2px;
+      letter-spacing: .5px;
+      line-height: 45px;
+      margin-bottom: 5px;
+    }
+    
+.titleContainer img {
+  width: 60%;
+}
+
+    .ImgContainer {
+      height: auto;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .imgResponsive {
+      width: 90%;
+      position: relative;
+      left: 40px;
+      top: -60px;
+    }
+
+  
+  }

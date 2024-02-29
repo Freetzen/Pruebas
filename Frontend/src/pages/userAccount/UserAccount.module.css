@@ -88,3 +88,13 @@
     color: rgba(206, 94, 250, 0.878);
     border: none;
 }
+
+
+/* Estilos para mobile ----------------------------------------------------------*/
+
+@media only screen and (max-width: 680px) {
+    .infoContainer{
+        display: none;
+    }
+}    
+

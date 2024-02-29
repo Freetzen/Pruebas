@@ -1,13 +1,17 @@
 {
   "NavBar": {
     "Home": "Home",
-    "Quote": "Quote",
+    "Quote": {
+      "title": "Quote",
+      "alertNotLogged": "You must log in to quote"
+    },
     "Projects": "Projects",
-    "ContactUs": "Contact Us"
+    "ContactUs": "Contact Us",
+    "Language": "Language"
   },
 
   "Header": {
-    "title": "If you can imagine it, we can",
+    "title": "If you can imagine it, we can develop it",
     "change": {
       "word1": "develop it.",
       "word2": "make it happen.",
@@ -17,11 +21,14 @@
   },
 
   "LoginButton": {
-    "title": "Login"
+    "title": "Login",
+    "bannedAlert": "You have been banned. Please contact support.",
+    "bannedAlertContact": "Contact Support",
+    "bannedWhy": "Why do I have this issue?"
   },
 
   "UserAccount": {
-    "Membership": "Membership",
+    "role": "Role",
     "creationDate": "Account creation date",
     "SignOut": "Log out",
     "adminPanel": "Admin panel"
@@ -29,11 +36,11 @@
 
   "AboutUs": {
     "title": "About Us",
-    "description": "At WebDevelop, we don't just create websites, we weave digital stories. From our humble beginnings in 2022, we've passionately dedicated ourselves to crafting exceptional online experiences that captivate, inspire, and connect."
+    "description": "At WeDevelop, we don't just create websites, we weave digital stories. From our humble beginnings in 2022, we've passionately dedicated ourselves to crafting exceptional online experiences that captivate, inspire, and connect."
   },
 
   "WhyWedevelop": {
-    "title": "Why WebDevelop?",
+    "title": "Why WeDevelop?",
     "section1": {
       "title": "Experience",
       "description": "With expertise in website development, we excel in design, programming, and optimization. Our user-centric approach and up-to-date knowledge ensure efficient and aesthetically pleasing websites."
@@ -73,22 +80,31 @@
   "RatingHome": {
     "rating": "Rating",
     "comments": "Total Comments",
-    "NotLogged": "You must be singed up to send review",
+    "NotBuyer": "You must get a buy to review",
     "RatingForm": {
       "message": "Leave Your Review :",
-      "button": "Send Review!"
+      "button": "Send Review!",
+      "alertTitle": "Your review has been submitted!"
     },
     "viewAll": "All reviews",
     "ReviewsAll": {
       "error1": "Error getting reviews:",
       "error2": "Error when obtaining reviews by rating:",
       "title": "Reviews and comments",
+      "subTitle": "Filter by stars:",
       "all": "All reviews",
       "5stars": "5 stars",
       "4stars": "4 stars",
       "3stars": "3 stars",
       "2stars": "2 stars",
       "1star": "1 star",
+      "orderBy": "Order by:",
+      "recent": "Most recent",
+      "oldest": "Oldest",
+      "paginatePrev": "Previous",
+      "paginatePage": "Page",
+      "paginateOf": "of",
+      "paginateNext": "Next",
       "noReviewsStar": "No reviews found with that rating"
     }
   },
@@ -145,14 +161,14 @@
       "answer3": "Previous question"
     },
     "Section6": {
-      "title": "How many visits do you estimate your site will have?",
-      "answer1": "5 to 10 visits per month",
-      "answer2": "10 to 20 visits per month",
-      "answer3": "20 or more visits per month"
+      "title": "How many visits per month do you estimate your site will have?",
+      "answer1": "5 to 10",
+      "answer2": "10 to 20",
+      "answer3": "+ 20"
     },
     "Section7": {
       "title": "How many languages do you need your website to support?",
-      "answer1": "Single language",
+      "answer1": "Single",
       "answer2": "Bilingual",
       "answer3": "Multilingual"
     },
@@ -187,9 +203,16 @@
     }
   },
 
+
+
+  "plansTitle":{
+    "title": "Plans and pricing",
+    "subtitle": "Choose the right plan for your website and we will develop it"
+  },
   "plans": {
     "BasicPlan": {
-      "title": "Basic Plan",
+      "title": "Basic",
+      "description": "For those looking to start their online presence in a simple yet effective way.",
       "sec1": "Registration with other platforms.",
       "sec2": "Custom domain.",
       "sec3": "Templates predefined.",
@@ -201,10 +224,14 @@
       "sec9": "Multi-site dashboard & admins.",
       "sec10": "live chat.",
       "sec11": "AI personalized live chat.",
+      "showMore": "Show more",
+      "showLess": "Show less",
+      "perProject": "/per project",
       "button": "Get Started"
     },
     "BusinessPlan": {
-      "title": "Business Plan",
+      "title": "Business",
+      "description": "Designed to enhance efficiency, security, and interactivity in your digital presence.",
       "sec1": "SSL certificate.",
       "sec2": "Registration with other platforms.",
       "sec3": "Custom domain.",
@@ -216,10 +243,14 @@
       "sec9": "Multi-site dashboard & admins",
       "sec10": "Personalized email",
       "sec11": "AI personalized live chat",
+      "showMore": "Show more",
+      "showLess": "Show less",
+      "perProject": "/per project",
       "button": "Get Started"
     },
     "EnterprisePlan": {
-      "title": "Enterprise Plan",
+      "title": "Enterprise",
+      "description": "Unlock your company's digital potential with features designed for growth.",
       "sec1": "SSL certificate.",
       "sec2": "Registration with other platforms.",
       "sec3": "Custom domain.",
@@ -230,9 +261,23 @@
       "sec8": "Multi-site dashboard & admins",
       "sec9": "live chat.",
       "sec10": "AI personalized live chat.",
-      "sec11": "Fields per form.",
+      "sec11": "Advanced Analytics Tools.",
+      "showMore": "Show more",
+      "showLess": "Show less",
+      "perProject": "/per project",
       "button": "Get Started"
     }
+  },
+
+  "PayStatus": {
+    "title": "Payment Status",
+    "number": "Payment number:",
+    "service": "Service Name:",
+    "type": "Payment Type:",
+    "amount": "Payment Amount:",
+    "creation": "Creation Date:",
+    "email": "Email:",
+    "backHome": "Back to Home"
   },
 
   "ContactUsPage": {

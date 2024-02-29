@@ -19,8 +19,11 @@ export const LegalNorm = ({ quote, setQuote, question, setQuestion, setProgressB
         ...quote,
         'legalNorm': valueClick
       })
-      setQuestion(question + 1)
-      setProgressBar(progressBar + 10)
+      if (quote.extraRequeriments == null) {
+        setProgressBar(progressBar + 10)
+        setQuestion(question + 1)
+      }
+      else setQuestion(11)
     }
   }
 
@@ -30,8 +33,11 @@ export const LegalNorm = ({ quote, setQuote, question, setQuestion, setProgressB
       ...quote,
       'legalNorm': requirements
     })
-    setQuestion(question + 1)
-    setProgressBar(progressBar + 10)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
   }
 
   return (
@@ -58,6 +64,7 @@ export const LegalNorm = ({ quote, setQuote, question, setQuestion, setProgressB
             value={requirements}
             onChange={handleChange}
           />
+          <div className={styles.buttonsTwo}>
           <button
             onClick={handleClickContinue}
           >
@@ -66,6 +73,8 @@ export const LegalNorm = ({ quote, setQuote, question, setQuestion, setProgressB
           <button
             onClick={() => setPosAnswer(false)}
           >Cancel</button>
+          </div>
+          
         </div>
       ) : (<></>)}
     </div>

@@ -3,29 +3,29 @@ const nodemailer = require("nodemailer");
 
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: "contactwedevelop@gmail.com",
-        pass: "xrux iwcy cykn hpjh",
-    },
+  service: "gmail",
+  auth: {
+    user: "contactwedevelop@gmail.com",
+    pass: "xrux iwcy cykn hpjh",
+  },
 });
 
 
-const postUsers = async(req, res) => {
-    const {name, email, image} = req.body
-    try {
-    
-        const users = await createUser({
-            name,
-            email,
-            image
-        });
+const postUsers = async (req, res) => {
+  const { name, email, image } = req.body
+  try {
 
-        const mailOptions = {
-            from: "contactwedevelop@gmail.com",
-            to: email,
-            subject: `Welcome to WeDevelop!`,
-            html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    const users = await createUser({
+      name,
+      email,
+      image
+    });
+
+    const mailOptions = {
+      from: "contactwedevelop@gmail.com",
+      to: email,
+      subject: `Welcome to WeDevelop!`,
+      html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
             <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
              <head>
               <meta charset="UTF-8">
@@ -231,20 +231,20 @@ const postUsers = async(req, res) => {
               </div>
              </body>
             </html>`,
-        };
+    };
 
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log("Correo electrónico enviado: " + info.response);
-            }
-        });
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Correo electrónico enviado: " + info.response);
+      }
+    });
 
-        res.status(200).json(users)
-    } catch (error) {
-        res.status(500).send({ error: error.message })
-    }
+    res.status(200).json(users)
+  } catch (error) {
+    res.status(500).send({ error: error.message })
+  }
 }
 
 module.exports = postUsers

@@ -1,13 +1,25 @@
 .projectsContainer {
-    background-color: #6940ff;
+    background-image: url('./../../../public/images/fondoProject.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 100px 0px;
-    text-align: center;
+    padding-top: 300px;
 }
+
+.Title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 100px;
+}
+
+.containerProject {
+    background-color: #F0F2F9;
+    padding-top: 50px;
+}
+
 
 .projectsContainer .filtersContainer {
     height: max-content;
@@ -23,13 +35,13 @@
 
 
 .proyectos {
-    height: max-content;
+    height: auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
     padding: 70px 0px;
+    gap: 30px;
 }
 
 .selectOptions{
@@ -40,4 +52,10 @@
     margin-top: 50px;
     padding-left: 30%;
     padding-right: 30%;
+}
+
+.paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

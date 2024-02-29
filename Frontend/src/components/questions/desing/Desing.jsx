@@ -13,8 +13,11 @@ export const Desing = ({ quote, setQuote, question, setQuestion, progressBar, se
       ...quote,
       'desing': title
     })
-    setQuestion(question + 1)
-    setProgressBar(progressBar + 10)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
   }
 
   // Captura el valor del textArea
@@ -26,7 +29,11 @@ export const Desing = ({ quote, setQuote, question, setQuestion, progressBar, se
       ...quote,
       'desing': valorTextarea
     })
-    setQuestion(question + 1)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
   }
 
   return (
@@ -49,14 +56,14 @@ export const Desing = ({ quote, setQuote, question, setQuestion, progressBar, se
           ))}
         </div>
         <div className={style.containerTextArea}>
-          <h4>Don't like any template?</h4>
+          <h4>{t("QuoteQuestions.Section8.subtitle")}</h4>
           <textarea
             onChange={(e) => setValorTextarea(e.target.value)}
             name={valorTextarea}
             id=""
             cols="30"
             rows="10"
-            placeholder='Write your ideas here'
+            placeholder={t("QuoteQuestions.Section8.input")}
           ></textarea>
           <button onClick={capturarValor}>{t("QuoteQuestions.Section8.continue")}</button>
         </div>

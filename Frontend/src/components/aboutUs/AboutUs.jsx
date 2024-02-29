@@ -16,7 +16,6 @@ const AboutUs = () => {
           {t("AboutUs.description")}</p>
         </div>
       </div>
-
     </section>
   )
 }

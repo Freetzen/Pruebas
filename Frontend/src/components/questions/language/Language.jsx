@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Language.module.css'
 import { useTranslation } from 'react-i18next'
 
-export const Language = ({ quote, setQuote, question, setQuestion, progressBar, setProgressBar  }) => {
+export const Language = ({ quote, setQuote, question, setQuestion, progressBar, setProgressBar }) => {
   const [t, i18n] = useTranslation("global");
 
   const handleClick = (e) => {
@@ -11,8 +11,11 @@ export const Language = ({ quote, setQuote, question, setQuestion, progressBar, 
       ...quote,
       'language': valueClick
     })
-    setQuestion(question + 1)
-    setProgressBar(progressBar + 10)
+    if (quote.extraRequeriments == null) {
+      setProgressBar(progressBar + 10)
+      setQuestion(question + 1)
+    }
+    else setQuestion(11)
   }
   return (
     <div className={style.containerLanguage}>

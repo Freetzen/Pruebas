@@ -39,15 +39,39 @@
     margin:50px auto;
 }
 
-@media screen and (max-width: 768px) {
-    .carouselStyles {
-        max-width: 500px;
-    }
-}
 
-@media screen and (max-width: 480px) {
+
+
+/* Estilos para mobile ----------------------------------------------------------*/
+
+@media only screen and (max-width: 680px) {
+
+    .carouselcontainer {
+        padding: 40px 20px;
+    }
+    
+    .containerTitle {
+        padding: 0;
+    }
+    
+    .containerTitle h2 {
+        font-size: 26px; 
+        font-weight: 600;
+        letter-spacing: -.5px;
+        color: #494949;
+    }
+    
+    .containerCarrusel {
+        margin: 40px 0;
+    }
+    
     .carouselStyles {
-        max-width: 300px;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .buttonContainer {
+        margin-top: 70px;
     }
 }
 

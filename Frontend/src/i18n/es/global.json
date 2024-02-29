@@ -1,13 +1,17 @@
 {
   "NavBar": {
     "Home": "Inicio",
-    "Quote": "Cotizar",
+    "Quote": {
+      "title": "Cotizar",
+      "alertNotLogged": "Debes iniciar sesión para cotizar"
+    },
     "Projects": "Proyectos",
-    "ContactUs": "Contactanos"
+    "ContactUs": "Contactanos",
+    "Language": "idioma"
   },
 
   "Header": {
-    "title": "Si puedes imaginarlo, nosotros podemos",
+    "title": "Si puedes imaginarlo, nosotros podemos desarrollarlo",
     "change": {
       "word1": "desarrollarlo.",
       "word2": "hacer que suceda.",
@@ -17,11 +21,15 @@
   },
 
   "LoginButton": {
-    "title": "Iniciar Sesion"
+    "title": "Iniciar Sesion",
+    "register": "Registrarse",
+    "bannedAlert": "Has sido baneado. Por favor contacte al soporte.",
+    "bannedAlertContact": "Soporte de contacto",
+    "bannedWhy": "¿Por qué tengo este problema?"
   },
 
   "UserAccount": {
-    "Membership": "Membresia",
+    "role": "Rol",
     "creationDate": "Fecha de creacion de la cuenta",
     "SignOut": "Desconectarse",
     "adminPanel": "Panel de administrador"
@@ -29,11 +37,11 @@
 
   "AboutUs": {
     "title": "Sobre nosotros",
-    "description": "En WebDevelop, no solo creamos sitios web, también tejemos historias digitales. Desde nuestros modestos comienzos en 2022, nos hemos dedicado con pasión a crear experiencias en línea excepcionales que cautivan, inspiran y conectan."
+    "description": "En WeDevelop, no solo creamos sitios web, también tejemos historias digitales. Desde nuestros modestos comienzos en 2022, nos hemos dedicado con pasión a crear experiencias en línea excepcionales que cautivan, inspiran y conectan."
   },
 
   "WhyWedevelop": {
-    "title": "¿Por que WebDevelop?",
+    "title": "¿Por que WeDevelop?",
     "section1": {
       "title": "  Experiencia",
       "description": "Con experiencia en la creación de sitios web, nos destacamos en diseño, programación y optimización. Nuestro enfoque centrado en el usuario y nuestro conocimiento actualizado garantizan sitios web eficientes y estéticamente agradables."
@@ -73,22 +81,31 @@
   "RatingHome": {
     "rating": "Calificación",
     "comments": "reseñas Totales",
-    "NotLogged": "Debes estar registrado para enviar una reseña",
+    "NotBuyer": "Debes estar registrado para enviar una reseña",
     "RatingForm": {
       "message": "Deja tu reseña :",
-      "button": "Enviar Reseña!"
+      "button": "Enviar Reseña!",
+      "alertTitle": "¡Su Reseña ha sido enviada!"
     },
     "viewAll": "Ver todas las reseñas",
     "ReviewsAll": {
       "error1": "Error al obtener reviews por rating:",
       "error2": "Error al obtener reviews por rating:",
       "title": "Comentarios y reseñas",
-      "all": "All reviews",
+      "subTitle": "Filtrar por estrellas:",
+      "all": "Todas las reseñas",
       "5stars": "5 estrellas",
       "4stars": "4 estrellas",
       "3stars": "3 estrellas",
       "2stars": "2 estrellas",
       "1star": "1 estrellas",
+      "orderBy": "Ordenar de:",
+      "recent": "Más reciente",
+      "oldest": "Más antiguo",
+      "paginatePrev": "Anterior",
+      "paginatePage": "Página",
+      "paginateOf": "de",
+      "paginateNext": "Siguiente",
       "noReviewsStar": "No se encontraron reseñas con esa calificación."
     }
   },
@@ -145,10 +162,10 @@
       "answer3": "Pregunta anterior"
     },
     "Section6": {
-      "title": "¿Cuántas visitas estima que tendrá su sitio?",
-      "answer1": "5 de 10 visitas por mes",
-      "answer2": "10 a 20 visitas por mes",
-      "answer3": "Mas de 20 visitas por mes"
+      "title": "¿Cuántas visitas estima que tendrá su sitio por mes?",
+      "answer1": "5 a 10",
+      "answer2": "10 a 20",
+      "answer3": "Mas de 20"
     },
     "Section7": {
       "title": "¿Cuántos idiomas necesita que admita su sitio web?",
@@ -187,9 +204,16 @@
     }
   },
 
+
+
+  "plansTitle":{
+    "title": "Planes y Precios",
+    "subtitle": "Elija el plan adecuado para su sitio web y nosotros lo desarrollaremos"
+  },
   "plans": {
     "BasicPlan": {
-      "title": "Plan Básico",
+      "title": "Basic",
+      "description": "Para quienes desean iniciar su presencia en Internet de forma sencilla pero eficaz.",
       "sec1": "Registro en otras plataformas.",
       "sec2": "Dominio personalizado.",
       "sec3": "Plantillas predefinidas.",
@@ -201,10 +225,14 @@
       "sec9": "Panel y administradores multi-sitio.",
       "sec10": "Chat en vivo.",
       "sec11": "Chat en vivo personalizado con IA.",
+      "showMore": "Ver más",
+      "showLess": "Ver menos",
+      "perProject": "/por proyecto",
       "button": "Comenzar"
     },
     "BusinessPlan": {
-      "title": "Plan de Negocios",
+      "title": "Business",
+      "description": "Diseñado para mejorar la eficacia, la seguridad y la interactividad de su presencia digital..",
       "sec1": "Certificado SSL.",
       "sec2": "Registro en otras plataformas.",
       "sec3": "Dominio personalizado.",
@@ -216,10 +244,14 @@
       "sec9": "Panel y administradores multi-sitio.",
       "sec10": "Correo electrónico personalizado.",
       "sec11": "Chat en vivo personalizado con IA.",
+      "showMore": "Ver más",
+      "showLess": "Ver menos",
+      "perProject": "/por proyecto",
       "button": "Comenzar"
     },
     "EnterprisePlan": {
-      "title": "Plan Empresarial",
+      "title": "Enterprise",
+      "description": "Libere el potencial digital de su empresa con funciones diseñadas para el crecimiento.",
       "sec1": "Certificado SSL.",
       "sec2": "Registro en otras plataformas.",
       "sec3": "Dominio personalizado.",
@@ -230,9 +262,23 @@
       "sec8": "Panel y administradores multi-sitio.",
       "sec9": "Chat en vivo.",
       "sec10": "Chat en vivo personalizado con IA.",
-      "sec11": "Campos por formulario.",
+      "sec11": "Herramientas analíticas avanzadas.",
+      "showMore": "Ver más",
+      "showLess": "Ver menos",
+      "perProject": "/por proyecto",
       "button": "Comenzar"
     }
+  },
+
+  "PayStatus": {
+    "title": "Estado del pago",
+    "number": "Número de pago:",
+    "service": "Nombre del servicio:",
+    "type": "Tipo de pago:",
+    "amount": "Monto del pago:",
+    "creation": "Fecha de creación:",
+    "email": "Correo electrónico:",
+    "backHome": "Volver a inicio"
   },
 
   "ContactUsPage": {
