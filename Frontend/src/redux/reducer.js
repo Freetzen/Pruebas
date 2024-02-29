@@ -5,6 +5,8 @@ const initialState = {
   userData: {},
 };
 
+console.log('USER DATA REDUCER --------------->', initialState.userData)
+
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

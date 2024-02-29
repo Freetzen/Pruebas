@@ -13,13 +13,9 @@ import { loadUserData } from "../../redux/actions";
 
 
 const LoginButton = ({setLocalData}) => {
-
-  const dispatch = useDispatch()
-  const [menuIsActive, setMenuIsActive] = useState(true)
   const data = useSelector(state => state.userData)
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
-  const [loading, setLoading] = useState(false);
-  const [t, i18n] = useTranslation("global");
+
 
   useEffect(() => {
 
@@ -49,16 +45,16 @@ const LoginButton = ({setLocalData}) => {
 
 
   return (
-    <div className={style.containerLogin}>
+    <div >
       {!data?.email ? (
-        <button className={style.buttonLogin} onClick={handleLogin}>{t("LoginButton.title")}</button>
+        <button  onClick={handleLogin}>LoginButton</button>
       ) : (
         <>
         <UserAccount/>
-        <div className={style.containerButtonUser} >
-          <div className={style.containerSpinner} style={loading ? {display: ''} : {display: 'none'}} >
+        <div  >
+          <div  >
           </div>
-          <div className={style.containerNameAndButton} style={loading ? {display: 'none'} : {display: ''}}>
+          <div  >
             <button>
               {data?.name}
             </button>
